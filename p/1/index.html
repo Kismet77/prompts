@@ -1,51 +1,56 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
+<!doctype html>
+<html lang="en-GB"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex">
-<title>Prompt 01: Learn any concept · The Trading Blueprint</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../style.css">
-</head>
-<body>
-<div class="wrap">
-<span class="crosshair ch-tl" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3.4" stroke="currentColor" stroke-width="1"/><path d="M7 0v3M7 11v3M0 7h3M11 7h3" stroke="currentColor" stroke-width="1"/></svg></span><span class="crosshair ch-tr" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3.4" stroke="currentColor" stroke-width="1"/><path d="M7 0v3M7 11v3M0 7h3M11 7h3" stroke="currentColor" stroke-width="1"/></svg></span><span class="crosshair ch-bl" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3.4" stroke="currentColor" stroke-width="1"/><path d="M7 0v3M7 11v3M0 7h3M11 7h3" stroke="currentColor" stroke-width="1"/></svg></span><span class="crosshair ch-br" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3.4" stroke="currentColor" stroke-width="1"/><path d="M7 0v3M7 11v3M0 7h3M11 7h3" stroke="currentColor" stroke-width="1"/></svg></span>
-<header class="site">
-  <a class="logo" href="../../index.html"><span class="the">THE</span>TRADING<br>BLUEPRINT</a>
-  <span class="ed">ED. 2026</span>
-</header>
-
-<p><a class="back" href="../../index.html">&larr; ALL PROMPTS</a></p>
-<p class="pnum" style="margin-top:26px">№ 01 · <span class="chip" style="color:#5B8EEA;border-color:#5B8EEA">LEARN</span></p>
-<h1>Learn any concept</h1>
-<div class="promptbox"><pre>Explain <span class="ph">[concept]</span> to a beginner: what it is, a simple example, why traders use it, and its biggest weakness. Under 200 words.</pre></div>
-<button class="copy" id="copy">COPY PROMPT</button>
-<textarea id="raw" hidden readonly>Explain [concept] to a beginner: what it is, a simple example, why traders use it, and its biggest weakness. Under 200 words.</textarea>
-<p class="hint">Swap the <span class="ph mono">[gold]</span> parts for your own details. Paste your context block first (Chapter 5) for a sharper answer.</p>
-
-<footer class="site">
-  <p><b>Educational content, not financial advice.</b> Trading carries a high risk of loss and most retail traders lose money. AI tools can be wrong: verify everything, practise on a demo account, and only risk money you can afford to lose.</p>
-  <p style="margin-top:8px">© 2026 The Trading Blueprint. Licensed for personal use by the purchaser.</p>
-</footer>
-</div>
+<meta name="theme-color" content="#0B1636">
+<title>#1 Learn any concept · The Sceptic’s Desk</title>
+<meta name="description" content="Turns any unfamiliar term into a plain-English explanation you can actually check, with the weakness included.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="#1 Learn any concept · The Sceptic’s Desk">
+<meta property="og:description" content="Turns any unfamiliar term into a plain-English explanation you can actually check, with the weakness included.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head><body><div class="wrap"><header>
+<a class="mark" href="../../../"><span class="the">THE</span>
+<div class="nm">Sceptic&#8217;s<br>Desk</div>
+<div class="desc">AI Trading, Demystified</div></a>
+<div class="rail">Prompt 01</div></header>
+<div class="tags"><span class="tag num">Prompt 01</span>
+<span class="tag" style="color:#5B8EEA">Learn</span>
+<span class="tag" style="color:var(--muted)">Learn any concept</span></div>
+<h1>The infinite patient tutor</h1>
+<p class="blurb">Turns any unfamiliar term into a plain-English explanation you can actually check, with the weakness included.</p>
+<div class="label">The prompt</div>
+<div class="prompt" id="p1">Explain <b>[concept]</b> to a beginner: what it is, a simple example, why traders use it, and its biggest weakness. Under 200 words.</div>
+<button class="copy" data-target="p1">Copy prompt</button>
+<p class="swap">Replace [concept] with the term you&#8217;re stuck on.</p>
+<div class="note"><div class="l">Before you act on the answer</div>Add &#8220;tell me where you&#8217;re uncertain&#8221; to any answer you plan to act on.</div>
+<div class="rule">Do I understand why? &middot; Can I verify it? &middot;
+What if it&#8217;s wrong?<br><b>If you can&#8217;t answer all three, you don&#8217;t act yet.</b></div>
+<footer>
+Educational content, not financial advice. Most retail traders lose money.
+Practise on a demo account and only risk what you can afford to lose.<br>
+An AI is your analyst, not your decision-maker. Verify everything.<br>
+&copy; 2026 The Sceptic&#8217;s Desk.
+</footer></div>
 <script>
-(function(){
-  var btn=document.getElementById('copy'),src=document.getElementById('raw');
-  if(!btn)return;
-  btn.addEventListener('click',function(){
-    var t=src.value;
-    function done(){btn.classList.add('ok');btn.textContent='COPIED. NOW PASTE IT INTO YOUR AI';
-      setTimeout(function(){btn.classList.remove('ok');btn.textContent='COPY PROMPT';},2200);}
+document.querySelectorAll('button.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=document.getElementById(b.dataset.target).innerText;
+    var done=function(){b.textContent='Copied. Now paste it into your AI.';
+      b.classList.add('done');
+      setTimeout(function(){b.textContent='Copy prompt';b.classList.remove('done');},2600);};
     if(navigator.clipboard&&navigator.clipboard.writeText){
       navigator.clipboard.writeText(t).then(done,fallback);
-    }else{fallback();}
-    function fallback(){src.style.position='fixed';src.style.opacity=0;src.hidden=false;
-      src.select();try{document.execCommand('copy');done();}catch(e){}src.hidden=true;}
+    } else { fallback(); }
+    function fallback(){
+      var a=document.createElement('textarea');a.value=t;a.style.position='fixed';
+      a.style.opacity='0';document.body.appendChild(a);a.select();
+      try{document.execCommand('copy');done();}catch(e){
+        b.textContent='Press and hold the prompt to copy';}
+      document.body.removeChild(a);
+    }
   });
-})();
-</script>
-</body>
-</html>
+});
+</script></body></html>
