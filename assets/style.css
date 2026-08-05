@@ -1,16 +1,4 @@
-<!doctype html>
-<html lang="en-GB"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0B1636">
-<title>The Sceptic’s Desk · AI Trading, Demystified</title>
-<meta name="description" content="Process-first trading education. No signals, no hype.">
-<meta name="robots" content="index,follow">
-<meta property="og:title" content="The Sceptic’s Desk · AI Trading, Demystified">
-<meta property="og:description" content="Process-first trading education. No signals, no hype.">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
+
 :root{
   --navy:#0B1636;--navy2:#101E44;--navy3:#0A1430;--line:#26315A;--line2:#1B274C;
   --gold:#EFAF43;--gold-soft:#ECC165;
@@ -78,44 +66,3 @@ footer a{color:var(--muted)}
   color:var(--muted);margin-top:4px}
 .item .go{margin-left:auto;color:var(--gold);flex:none;font-size:17px}
 @media(max-width:420px){body{padding:18px 14px 34px}.rail{display:none}}
-</style>
-</head><body><div class="wrap"><header>
-<a class="mark" href="./"><span class="the">THE</span>
-<div class="nm">Sceptic&#8217;s<br>Desk</div>
-<div class="desc">AI Trading, Demystified</div></a>
-<div class="rail"></div></header>
-<h1>AI Trading,<br>Demystified</h1>
-<p class="blurb">Use artificial intelligence to research smarter, build strategies, and sharpen
-your trading. Without the hype, and without pretending it&#8217;s a money machine.</p>
-<div class="list">
-<a class="item" href="p/"><span class="n">&#9656;</span>
-<span><span class="t">Prompt library</span>
-<span class="c">Scan-and-go prompts from the guide</span></span>
-<span class="go">&#8594;</span></a></div>
-<div class="rule">Test ideas. Never opinions.</div>
-<footer>
-Educational content, not financial advice. Most retail traders lose money.
-Practise on a demo account and only risk what you can afford to lose.<br>
-An AI is your analyst, not your decision-maker. Verify everything.<br>
-&copy; 2026 The Sceptic&#8217;s Desk.
-</footer></div>
-<script>
-document.querySelectorAll('button.copy').forEach(function(b){
-  b.addEventListener('click',function(){
-    var t=document.getElementById(b.dataset.target).innerText;
-    var done=function(){b.textContent='Copied. Now paste it into your AI.';
-      b.classList.add('done');
-      setTimeout(function(){b.textContent='Copy prompt';b.classList.remove('done');},2600);};
-    if(navigator.clipboard&&navigator.clipboard.writeText){
-      navigator.clipboard.writeText(t).then(done,fallback);
-    } else { fallback(); }
-    function fallback(){
-      var a=document.createElement('textarea');a.value=t;a.style.position='fixed';
-      a.style.opacity='0';document.body.appendChild(a);a.select();
-      try{document.execCommand('copy');done();}catch(e){
-        b.textContent='Press and hold the prompt to copy';}
-      document.body.removeChild(a);
-    }
-  });
-});
-</script></body></html>
