@@ -1,543 +1,617 @@
 <!doctype html>
-<html lang="en-GB">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Sceptic&#8217;s Desk · Free Starter Pack</title>
-    <meta
-      name="description"
-      content="Six copy-paste AI prompts and a one-page risk sheet for traders who want a real edge, not a fantasy. Free. Educational content, not financial advice."
-    />
-    <meta name="theme-color" content="#0B1636" />
-    <link rel="canonical" href="https://scepticsdesk.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://scepticsdesk.com/" />
-    <meta property="og:site_name" content="The Sceptic&#8217;s Desk" />
-    <meta
-      property="og:title"
-      content="The Sceptic&#8217;s Starter Pack · Free"
-    />
-    <meta
-      property="og:description"
-      content="Six copy-paste AI prompts and a one-page risk sheet. AI Trading, Demystified."
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="assets/sceptics.css" />
-  </head>
-  <body>
-    <span class="xh tl"
-      ><svg viewBox="0 0 22 22" fill="none" aria-hidden="true">
-        <circle cx="11" cy="11" r="4.2" stroke="#EFAF43" stroke-width="1.1" />
-        <path
-          d="M11 0v6M11 16v6M0 11h6M16 11h6"
-          stroke="#EFAF43"
-          stroke-width="1.1"
-        /></svg
-    ></span>
-    <span class="xh tr"
-      ><svg viewBox="0 0 22 22" fill="none" aria-hidden="true">
-        <circle cx="11" cy="11" r="4.2" stroke="#EFAF43" stroke-width="1.1" />
-        <path
-          d="M11 0v6M11 16v6M0 11h6M16 11h6"
-          stroke="#EFAF43"
-          stroke-width="1.1"
-        /></svg
-    ></span>
-    <span class="xh bl"
-      ><svg viewBox="0 0 22 22" fill="none" aria-hidden="true">
-        <circle cx="11" cy="11" r="4.2" stroke="#EFAF43" stroke-width="1.1" />
-        <path
-          d="M11 0v6M11 16v6M0 11h6M16 11h6"
-          stroke="#EFAF43"
-          stroke-width="1.1"
-        /></svg
-    ></span>
-    <span class="xh br"
-      ><svg viewBox="0 0 22 22" fill="none" aria-hidden="true">
-        <circle cx="11" cy="11" r="4.2" stroke="#EFAF43" stroke-width="1.1" />
-        <path
-          d="M11 0v6M11 16v6M0 11h6M16 11h6"
-          stroke="#EFAF43"
-          stroke-width="1.1"
-        /></svg
-    ></span>
+<html lang="en-GB"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0B1636">
+<title>The Sceptic&#8217;s Desk &middot; AI Trading, Demystified</title>
+<meta name="description" content="A structured way to use AI as a research and thinking tool in your trading, without handing over your decisions. No signals. No promises. No black-box system.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://scepticsdesk.com/">
+<meta property="og:title" content="The Sceptic&#8217;s Desk &middot; AI Trading, Demystified">
+<meta property="og:description" content="A structured way to use AI as a research and thinking tool in your trading, without handing over your decisions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scepticsdesk.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1636;--navy2:#101E44;--navy3:#0A1430;--line:#26315A;--line2:#1B274C;
+  --gold:#EFAF43;--gold-soft:#ECC165;
+  --white:#F4F7FF;--body:#B7C1DB;--muted:#828DAF;--faint:#5C668C;
+  --sans:'Space Grotesk',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--navy);color:var(--body);font-family:var(--sans);line-height:1.55;
+  min-height:100vh;padding:22px 18px 40px;
+  background-image:linear-gradient(rgba(123,150,220,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(123,150,220,.05) 1px,transparent 1px);
+  background-size:34px 34px}
+.wrap{max-width:960px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+  padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.mark{text-decoration:none;display:block}
+.mark .the{font-family:var(--mono);font-size:9px;letter-spacing:.34em;color:var(--gold);
+  display:block;margin-bottom:5px}
+.mark .nm{font-weight:700;font-size:17px;color:var(--white);line-height:1.05;
+  text-transform:uppercase;letter-spacing:.01em}
+.mark .desc{font-family:var(--mono);font-size:8px;letter-spacing:.2em;color:var(--muted);
+  text-transform:uppercase;margin-top:7px;padding-top:6px;border-top:1px solid var(--line)}
+.rail{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--faint);
+  text-transform:uppercase;text-align:right;flex:none}
+.rail a{color:var(--faint);text-decoration:none;display:block;line-height:2.1}
+.rail a:hover{color:var(--gold)}
+.tags{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  border-radius:5px;padding:4px 9px;border:1px solid currentColor}
+.tag.num{color:var(--gold)}
+h1{font-size:clamp(25px,7vw,33px);font-weight:700;color:var(--white);letter-spacing:-.02em;
+  line-height:1.12;margin-bottom:12px}
+.blurb{font-size:16px;color:#AEB8D6;margin-bottom:24px}
+.label{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:9px}
+.prompt{background:var(--navy2);border:1px solid var(--line);border-radius:12px;
+  padding:18px 18px;font-family:var(--mono);font-size:14px;line-height:1.72;
+  color:var(--body);white-space:pre-wrap;word-break:break-word}
+.prompt b{color:var(--gold);font-weight:400}
+.swap{font-size:14px;color:var(--muted);margin-top:12px}
+.note{border-left:2px solid var(--gold);background:var(--navy2);border-radius:0 10px 10px 0;
+  padding:14px 16px;margin-top:24px;font-size:14.5px}
+.note .l{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:6px}
+.rule{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--faint);text-align:center;margin-top:30px;line-height:1.9}
+.rule b{color:var(--gold-soft)}
+footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:10.5px;line-height:1.9;color:var(--faint);
+  letter-spacing:.02em}
+footer a{color:var(--muted)}
+.list{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.item{display:flex;gap:14px;align-items:center;background:var(--navy2);
+  border:1px solid var(--line);border-radius:11px;padding:14px 16px;text-decoration:none}
+.item:hover{border-color:var(--gold)}
+.item .n{font-family:var(--mono);font-size:16px;color:var(--gold);font-weight:700;
+  min-width:30px;flex:none}
+.item .t{color:var(--white);font-weight:700;font-size:15.5px;line-height:1.3}
+.item .c{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin-top:4px}
+.item .go{margin-left:auto;color:var(--gold);flex:none;font-size:17px}
 
-    <div class="wrap">
-      <header class="masthead">
-        <div class="wordmark">
-          <span class="the">THE</span>
-          <div class="tb">SCEPTIC&#8217;S<br />DESK</div>
-          <div class="desc">AI Trading, Demystified</div>
-        </div>
-        <div class="ed">
-          The Sceptic&#8217;s Starter Pack<br />Free · Edition 2026 · v1.0
-        </div>
-      </header>
+/* ---- homepage additions ---- */
+section{padding-top:44px;margin-top:44px;border-top:1px solid var(--line2)}
+section:first-of-type{padding-top:0;margin-top:0;border-top:0}
+h2{font-size:clamp(21px,5.2vw,27px);font-weight:700;color:var(--white);
+  letter-spacing:-.018em;line-height:1.18;margin-bottom:12px;max-width:760px}
+section>p,section>.lede,section>.tight,section>.note,section>.steps,section>h3{max-width:720px}
+section>.rule{max-width:720px;margin-left:auto;margin-right:auto}
+h3{font-size:16.5px;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:5px}
+p{margin-bottom:13px;font-size:15.5px}
+p:last-child{margin-bottom:0}
+.lede{font-size:16.5px;color:#AEB8D6}
+.tight p{margin-bottom:6px}
+.tight p:last-child{margin-bottom:0}
+.said{color:var(--white);font-weight:700}
+.dim{color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:30px;align-items:start}
+.hero h1{font-size:clamp(26px,4.6vw,38px);margin-bottom:16px;max-width:none}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{max-width:none}
+.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px}
+.quote{color:var(--gold);font-weight:700;font-size:16.5px;margin:18px 0 18px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.pill{border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-family:var(--mono);
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--body);white-space:nowrap}
+.fine{font-family:var(--mono);font-size:10.5px;line-height:1.95;color:var(--faint);
+  letter-spacing:.02em;margin:0}
+.fine b{color:var(--gold-soft);font-weight:400}
+.cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:22px}
+.btn{display:inline-block;background:var(--gold);color:#0B1636;border:1px solid var(--gold);
+  border-radius:11px;padding:15px 20px;font-family:var(--sans);font-size:15.5px;font-weight:700;
+  text-decoration:none;text-align:center;flex:1 1 240px;letter-spacing:.01em;cursor:pointer}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:transparent;color:var(--gold);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--gold)}
+.aside{font-size:14px;color:var(--muted);margin-top:14px}
+.steps{border-left:1px solid var(--line);margin:22px 0 0;padding-left:20px;
+  display:flex;flex-direction:column;gap:22px;list-style:none}
+.steps li{position:relative}
+.steps li::before{content:"";position:absolute;left:-24.5px;top:8px;width:8px;height:8px;
+  border:1px solid var(--gold);border-radius:50%;background:var(--navy)}
+.steps .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-bottom:5px}
+.steps p{font-size:15px;margin:0}
+.grid{display:grid;gap:11px;margin-top:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.span-last>*:last-child{grid-column:1/-1}
+.card{background:var(--navy2);border:1px solid var(--line);border-radius:11px;padding:16px 17px;
+  position:relative;overflow:hidden}
+.card .k{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-bottom:7px}
+.card p{font-size:14.5px;margin:0;color:var(--body)}
+.card.acc{border-left:2px solid var(--a,var(--gold))}
+.card.acc .k{color:var(--a,var(--gold))}
+.covers{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:22px}
+.cover{position:relative;background:var(--navy3);border:1px solid var(--line);
+  border-radius:10px;padding:15px 14px 14px;min-height:140px;
+  display:flex;flex-direction:column;overflow:hidden;
+  background-image:linear-gradient(rgba(123,150,220,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(123,150,220,.055) 1px,transparent 1px);
+  background-size:22px 22px}
+.cover::after{content:"";position:absolute;top:11px;right:11px;width:9px;height:9px;
+  border-top:1px solid var(--a);border-right:1px solid var(--a);opacity:.7}
+.cover .cn{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--a);
+  margin-bottom:auto}
+.cover .ct{font-weight:700;color:var(--white);font-size:14.5px;line-height:1.22;margin-top:16px}
+.cover .cm{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-top:7px;padding-top:8px;border-top:1px solid var(--line)}
+.cover .bar{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--a);opacity:.85}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:11px;margin-top:20px}
+.pane{background:var(--navy2);border:1px solid var(--line);border-radius:11px;padding:17px 18px}
+.pane .h{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.pane.no .h{color:#EC745B}
+.pane ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.pane li{font-size:14.5px;padding-left:20px;position:relative}
+.pane li::before{content:"+";position:absolute;left:0;top:-1px;font-family:var(--mono);
+  color:var(--gold);font-size:13px}
+.pane.no li::before{content:"\2013";color:#EC745B}
+.vault{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin-top:20px}
+.vault>*:last-child{grid-column:1/-1}
+.vault .card ul{list-style:none;margin-top:9px;display:flex;flex-direction:column;gap:6px}
+.vault .card li{font-size:14px;color:var(--body);padding-left:14px;position:relative}
+.vault .card li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:1px;
+  background:var(--a,var(--gold))}
+.tblwrap{margin-top:20px;border:1px solid var(--line);border-radius:11px;overflow:hidden}
+table{width:100%;border-collapse:collapse;background:var(--navy2)}
+th,td{padding:12px 13px;text-align:left;font-size:14px;border-bottom:1px solid var(--line2);
+  vertical-align:middle}
+thead th{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);background:var(--navy3);font-weight:400}
+thead th:last-child{color:var(--gold)}
+tbody th{font-weight:400;color:var(--body)}
+td{text-align:center;font-family:var(--mono);font-size:13px;color:var(--muted);width:22%}
+td.on{color:var(--gold-soft)}
+td b{color:var(--gold);font-weight:700}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+.faq{margin-top:20px;border:1px solid var(--line);border-radius:11px;overflow:hidden;
+  background:var(--navy2)}
+details{border-bottom:1px solid var(--line2)}
+details:last-child{border-bottom:0}
+summary{list-style:none;cursor:pointer;padding:15px 17px;color:var(--white);font-weight:700;
+  font-size:15px;display:flex;gap:14px;align-items:flex-start}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";margin-left:auto;font-family:var(--mono);color:var(--gold);
+  font-size:15px;line-height:1.35;flex:none}
+details[open] summary::after{content:"\2013"}
+details .a{padding:0 17px 16px;font-size:14.5px;color:var(--body)}
+details .a p{font-size:14.5px;margin-bottom:8px}
+.price{text-align:center;border:1px solid var(--line);border-radius:12px;background:var(--navy2);
+  padding:22px 18px;margin-top:22px}
+.price .fig{font-size:36px;font-weight:700;color:var(--white);line-height:1;letter-spacing:-.02em}
+.price .terms{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);margin-top:11px}
+.price .cta{margin-top:18px}
+.promise{border:1px solid var(--gold);border-radius:12px;padding:20px 20px;background:var(--navy2);
+  margin-top:20px}
+.signup{background:var(--navy2);border:1px solid var(--line);border-radius:12px;padding:20px}
+.signup .fig{font-size:33px;font-weight:700;color:var(--white);line-height:1;letter-spacing:-.02em;
+  display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.signup .fig span{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);font-weight:400}
+.signup .intro{font-size:14.5px;color:var(--body);margin-bottom:18px}
+.signup .f{margin-bottom:14px}
+.signup label.consent{display:flex;gap:11px;align-items:flex-start;font-size:13px;line-height:1.6;
+  color:var(--body);margin-bottom:6px;font-family:var(--sans);text-transform:none;
+  letter-spacing:0;cursor:pointer}
+.consent input{flex:none;width:17px;height:17px;margin-top:2px;accent-color:var(--gold)}
+.signup .small.mid{text-align:center}
+.hform .aside{text-align:center;font-size:13px;margin-top:14px}
+.hform .aside a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.hform .aside a:hover{border-color:var(--gold)}
+.signup label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-bottom:9px}
+.signup .f label{color:var(--muted)}
+.signup input[type=text]{width:100%;background:var(--navy3);border:1px solid var(--line);
+  border-radius:10px;padding:15px 14px;color:var(--white);font-family:var(--mono);font-size:15px}
+.signup input[type=text]::placeholder{color:var(--faint)}
+.signup input[type=text]:focus{outline:0;border-color:var(--gold)}
+.signup input[type=email]{width:100%;background:var(--navy3);border:1px solid var(--line);
+  border-radius:10px;padding:15px 14px;color:var(--white);font-family:var(--mono);font-size:15px}
+.signup input[type=email]::placeholder{color:var(--faint)}
+.signup input[type=email]:focus{outline:0;border-color:var(--gold)}
+.signup .btn{width:100%;margin-top:11px;flex:none}
+.signup .small{font-size:12.5px;color:var(--faint);margin-top:11px;line-height:1.6}
+.signup .small a{color:var(--gold-soft)}
+.signup{scroll-margin-top:18px}
+.signup.lit{border-color:var(--gold)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:24px}}
+@media(max-width:620px){
+  .g2,.vault{grid-template-columns:1fr}
+  .vault>*:last-child{grid-column:auto}
+  .covers{grid-template-columns:repeat(2,1fr)}
+  .covers.trio>*:last-child{grid-column:1/-1;min-height:0}
+}
+@media(max-width:520px){
+  th,td{padding:11px 9px;font-size:13px}
+  td{font-size:12px}
+  thead th{font-size:9px;letter-spacing:.1em}
+}
+@media(max-width:420px){body{padding:18px 14px 34px}.rail{display:none}}
+</style>
+</head><body><div class="wrap">
 
-      <!-- ============ HERO ============ -->
-      <div class="hero">
-        <div>
-          <div class="eyebrow">Free · Six pages · No card needed</div>
-          <h1>
-            Most people using AI to trade are asking it the
-            <span class="g">wrong questions</span>.
-          </h1>
-          <p class="lede">
-            The Sceptic&#8217;s Starter Pack is six copy-paste prompts and a
-            one-page risk sheet. It is a working sample of the toolkit, not a
-            sales brochure. Run the first prompt in five minutes and judge it on
-            what it gives you.
-          </p>
-          <p class="phil">
-            &#8220;An AI is your analyst, not your decision-maker.&#8221;
-          </p>
+<header>
+<a class="mark" href="/"><span class="the">THE</span>
+<div class="nm">Sceptic&#8217;s<br>Desk</div>
+<div class="desc">AI Trading, Demystified</div></a>
+<nav class="rail">
+<a href="#starter">Free Starter Pack</a>
+<a href="#method">The Method</a>
+<a href="#toolkit">The Toolkit</a>
+<a href="#faq">FAQ</a>
+</nav></header>
 
-          <div class="badges">
-            <span class="badge">6 prompts</span>
-            <span class="badge">1-page risk sheet</span>
-            <span class="badge">Works with any AI tool</span>
-            <span class="badge">No signals, ever</span>
-          </div>
+<!-- 1 -->
+<section id="top" class="hero">
+<div class="hcopy">
+<div class="eyebrow">Free &middot; Six pages &middot; No card needed</div>
+<h1>Most people using AI to trade are asking it the <em>wrong questions.</em></h1>
+<p class="lede">AI can analyse markets, challenge ideas and process more information than most traders ever could.</p>
+<p>But that doesn&#8217;t mean you should ask it what to trade.</p>
+<p>The Sceptic&#8217;s Desk gives you a structured way to use AI as a research and thinking tool, without handing over your decisions.</p>
+<p>Just better questions, better processes and a healthier level of scepticism.</p>
+<p class="quote">&#8220;No signals. No promises. No black-box trading system.&#8221;</p>
+<div class="pills">
+<span class="pill">6 prompts</span>
+<span class="pill">1-page risk sheet</span>
+<span class="pill">Works with any AI tool</span>
+<span class="pill">No signals, ever</span>
+</div>
+<p class="fine">Included prompts &nbsp;<b>05</b> &middot; <b>12</b> &middot; <b>14</b> &middot; <b>26</b> &middot; <b>31</b> &middot; <b>37</b><br>
+Numbered as they appear in the full Prompt Vault, so nothing has to be re-learned later.</p>
+</div>
 
-          <p
-            class="small"
-            style="
-              margin-top: 26px;
-              padding-top: 18px;
-              border-top: 1px solid var(--line2);
-            "
-          >
-            Included prompts &nbsp;·&nbsp; 05 &nbsp;·&nbsp; 12 &nbsp;·&nbsp; 14
-            &nbsp;·&nbsp; 26 &nbsp;·&nbsp; 31 &nbsp;·&nbsp; 37<br />
-            Numbered as they appear in the full Prompt Vault, so nothing has to
-            be re-learned later.
-          </p>
-        </div>
+<div class="hform">
+<!-- MAILERLITE: replace the action below with your form endpoint, or paste your MailerLite
+     embed in place of this whole <form> block. Field names must match your MailerLite fields. -->
+<form class="signup" id="starter" action="MAILERLITE_FORM_ACTION" method="post">
+<label for="email">Send it to me</label>
+<div class="fig">&pound;0 <span>Always free</span></div>
+<p class="intro">Enter your email and the pack lands in your inbox. You&#8217;ll get four short lessons over the following week, then it stops.</p>
+<div class="f">
+<label for="fname">First name (optional)</label>
+<input id="fname" type="text" name="fields[name]" autocomplete="given-name" placeholder="John">
+</div>
+<div class="f">
+<label for="email">Email address</label>
+<input id="email" type="email" name="fields[email]" required autocomplete="email" placeholder="you@example.com">
+</div>
+<label class="consent" for="consent">
+<input id="consent" type="checkbox" name="consent" required>
+<span>Yes, send me the Starter Pack and the follow-up lessons. I can unsubscribe from any email, and my address will never be sold or shared.</span>
+</label>
+<button class="btn" type="submit">Send me the Starter Pack</button>
+<p class="small mid">Double opt-in is on. You&#8217;ll get a confirmation email first, and the download arrives the moment you click it.
+See the <a href="/privacy.html">privacy notice</a>.</p>
+</form>
+<p class="aside">Already know what you&#8217;re looking for?<br>
+<a href="STORE_LINK">Get The Sceptic&#8217;s Toolkit &mdash; &pound;89</a></p>
+</div>
+</section>
 
-        <!-- ============ SIGNUP FORM · MailerLite ============
-         SETUP: replace ACTION_URL below with your MailerLite form action.
-         That is the only edit this form needs. Full instructions are in
-         MailerLite-Setup-Guide.md.
-         ================================================== -->
-        <div class="signup" id="get">
-          <div class="cardhead">Send it to me</div>
-          <div class="price">£0<small>Always free</small></div>
-          <p class="note">
-            Enter your email and the pack lands in your inbox. You&#8217;ll get
-            four short lessons over the following week, then it stops.
-          </p>
+<!-- 2 -->
+<section id="why">
+<div class="label">The problem</div>
+<h2>AI can be useful. That&#8217;s not the same as saying it is right.</h2>
+<p>Ask an AI tool a question about a market and you&#8217;ll usually get a confident answer.</p>
+<p>That is exactly why you need to be careful.</p>
+<p>AI can miss context. It can make things up. It can reinforce your assumptions. And sometimes it can produce a very convincing answer that is simply wrong.</p>
+<p>The answer isn&#8217;t to ignore AI.<br>It&#8217;s to use it differently.</p>
+<div class="note"><div class="l">The principle</div>
+The Sceptic&#8217;s Desk is built around one simple principle:<br>
+<b style="color:var(--white)">AI should be your analyst, not your decision-maker.</b></div>
+<div class="grid g2">
+<div class="card"><span class="k">Research</span><p>Use it to research.</p></div>
+<div class="card"><span class="k">Challenge</span><p>Use it to challenge your thinking.</p></div>
+<div class="card"><span class="k">Find gaps</span><p>Use it to find what you might have missed.</p></div>
+<div class="card" style="border-color:var(--gold)"><span class="k">Decide</span><p style="color:var(--white)">Then make the decision yourself.</p></div>
+</div>
+</section>
 
-          <!-- MailerLite embedded form, wired by hand.
-           Get ACTION_URL from MailerLite: Forms → Embedded forms → your form →
-           "Embed form into your website" → HTML code → copy the value of action=".
-           It looks like:
-           https://assets.mailerlite.com/jsonp/123456/forms/987654321/subscribe
-           The group and double opt-in are set on the MailerLite form itself,
-           not here, so there is no group input below. -->
-          <form
-            id="starter-form"
-            method="post"
-            action="https://assets.mailerlite.com/jsonp/2560096/forms/195324836651729981/subscribe"
-            novalidate
-          >
-            <!-- MailerLite hidden inputs. Check these against your own generated
-             embed code and copy across anything extra MailerLite includes. -->
-            <input type="hidden" name="ml-submit" value="1" />
-            <input type="hidden" name="anticsrf" value="true" />
+<!-- 3 -->
+<section id="method">
+<div class="label">The Sceptic&#8217;s Method</div>
+<h2>A better way to use AI in your trading.</h2>
+<ol class="steps">
+<li><span class="k">01 &mdash; Research</span>
+<p>Use AI to gather information, analyse markets and build context.</p></li>
+<li><span class="k">02 &mdash; Question</span>
+<p>Don&#8217;t accept the first answer. Ask what could be wrong, what is missing and what assumptions are being made.</p></li>
+<li><span class="k">03 &mdash; Challenge</span>
+<p>Make AI argue against your trade idea, not simply confirm it.</p></li>
+<li><span class="k">04 &mdash; Decide</span>
+<p>Take the information, apply your own judgement and make the trading decision yourself.</p></li>
+<li><span class="k">05 &mdash; Review</span>
+<p>Record what happened, what you got right, what you got wrong and what you can learn from it.</p></li>
+</ol>
+<div class="rule">The point isn&#8217;t to make AI think for you.<br>
+<b>It&#8217;s to make you think better.</b></div>
+</section>
 
-            <!-- Optional. Stores the consent tick against the subscriber.
-             Create a custom field with the tag "consent" in MailerLite first,
-             or delete this line and rely on the double opt-in record. -->
-            <input type="hidden" name="fields[consent]" value="yes" />
+<!-- 4 -->
+<section id="pack">
+<div class="label">Free</div>
+<h2>Try the method before you buy anything.</h2>
+<p class="lede">The Sceptic&#8217;s Starter Pack is a small working sample of the Sceptic&#8217;s Method.</p>
+<div class="covers trio">
+<figure class="cover" style="--a:#A98BF5"><span class="cn">01</span>
+<span class="ct">6 practical<br>AI prompts</span><span class="cm">Copy, paste, adapt</span><i class="bar"></i></figure>
+<figure class="cover" style="--a:#2FBF71"><span class="cn">02</span>
+<span class="ct">Risk<br>cheat sheet</span><span class="cm">One page</span><i class="bar"></i></figure>
+<figure class="cover" style="--a:#EFAF43"><span class="cn">03</span>
+<span class="ct">The Sceptic&#8217;s<br>approach</span><span class="cm">Introduction</span><i class="bar"></i></figure>
+</div>
+<p style="margin-top:20px">You&#8217;ll get:</p>
+<div class="pane" style="margin-top:11px"><ul>
+<li>6 practical AI prompts</li>
+<li>A one-page risk cheat sheet</li>
+<li>A simple introduction to the Sceptic&#8217;s approach</li>
+<li>Prompts you can use with ChatGPT, Claude or other AI tools</li>
+</ul></div>
+<div class="tight" style="margin-top:20px">
+<p>No email course.</p>
+<p>No sales funnel disguised as education.</p>
+<p>No watered-down version designed to frustrate you into buying.</p>
+</div>
+<p style="margin-top:13px">It is a working sample of the Toolkit, not a sales brochure.</p>
+<p class="said">Download it. Use it. Decide for yourself.</p>
 
-            <!-- Honeypot. Real people leave this empty, bots fill it in.
-             MailerLite ignores it, since it is not a fields[] input. -->
-            <div style="position: absolute; left: -9999px" aria-hidden="true">
-              <label for="website">Website</label>
-              <input
-                type="text"
-                id="website"
-                name="website"
-                tabindex="-1"
-                autocomplete="off"
-              />
-            </div>
+<div class="cta"><a class="btn" href="#starter">Get the Free Starter Pack</a></div>
+</section>
 
-            <div class="field">
-              <label for="ml-name">First name (optional)</label>
-              <input
-                type="text"
-                id="ml-name"
-                name="fields[name]"
-                autocomplete="given-name"
-                placeholder="John"
-              />
-            </div>
+<!-- 5 -->
+<section id="toolkit">
+<div class="label">The full system</div>
+<h2>Ready for the full system? The Sceptic&#8217;s Toolkit.</h2>
+<p class="lede">The complete Sceptic&#8217;s Method for using AI throughout your trading process.</p>
+<p>This isn&#8217;t another collection of generic ChatGPT prompts. It&#8217;s a practical toolkit designed to help you research, challenge, prepare, manage and review your trades.</p>
+<div class="covers">
+<figure class="cover" style="--a:#EFAF43"><span class="cn">01</span>
+<span class="ct">AI Trading,<br>Demystified</span><span class="cm">20-page guide</span><i class="bar"></i></figure>
+<figure class="cover" style="--a:#A98BF5"><span class="cn">02</span>
+<span class="ct">The Prompt<br>Vault</span><span class="cm">42 prompts</span><i class="bar"></i></figure>
+<figure class="cover" style="--a:#4E8CF7"><span class="cn">03</span>
+<span class="ct">The Trade<br>Checklist</span><span class="cm">Pre-trade process</span><i class="bar"></i></figure>
+<figure class="cover" style="--a:#2FBF71"><span class="cn">04</span>
+<span class="ct">The Risk<br>Cheat Sheet</span><span class="cm">Reference</span><i class="bar"></i></figure>
+<figure class="cover" style="--a:#1FB6C1"><span class="cn">05</span>
+<span class="ct">Position Size<br>Calculator</span><span class="cm">Tool</span><i class="bar"></i></figure>
+<figure class="cover" style="--a:#E07C2A"><span class="cn">06</span>
+<span class="ct">The Sceptic&#8217;s<br>Journal</span><span class="cm">Excel &amp; Notion</span><i class="bar"></i></figure>
+</div>
+<div class="label" style="margin-top:28px">Here&#8217;s what you get</div>
+<div class="grid">
+<div class="card acc" style="--a:#EFAF43"><span class="k">01 &mdash; AI Trading, Demystified</span>
+<p>A 20-page guide explaining how AI actually fits into a trading workflow, where it can help and where you need to be careful.</p></div>
+<div class="card acc" style="--a:#A98BF5"><span class="k">02 &mdash; The Prompt Vault</span>
+<p>42 structured prompts covering market research, analysis, strategy development, trade preparation, challenge and review.</p></div>
+<div class="card acc" style="--a:#4E8CF7"><span class="k">03 &mdash; The Trade Checklist</span>
+<p>A repeatable process for questioning your trade before you put your money at risk.</p></div>
+<div class="card acc" style="--a:#2FBF71"><span class="k">04 &mdash; The Risk Cheat Sheet</span>
+<p>A practical reference for risk, expectancy, position sizing, reward-to-risk and drawdown.</p></div>
+<div class="card acc" style="--a:#1FB6C1"><span class="k">05 &mdash; Position Size Calculator</span>
+<p>Calculate your position size from your account size, risk level and stop-loss distance.</p></div>
+<div class="card acc" style="--a:#E07C2A"><span class="k">06 &mdash; The Sceptic&#8217;s Journal</span>
+<p>Record your trades, your reasoning and your results using the Excel or Notion version.</p></div>
+</div>
+<div class="rule">One system. Six working parts.<br>
+<b>&pound;89 once. Lifetime access. No subscription.</b></div>
+<div class="cta"><a class="btn" href="STORE_LINK">Get The Sceptic&#8217;s Toolkit</a></div>
+</section>
 
-            <div class="field">
-              <label for="ml-email">Email address</label>
-              <input
-                type="email"
-                id="ml-email"
-                name="fields[email]"
-                required
-                autocomplete="email"
-                placeholder="you@example.com"
-              />
-            </div>
+<!-- 6 -->
+<section id="use">
+<div class="label">In practice</div>
+<h2>What can you actually use it for?</h2>
+<div class="grid g2 span-last">
+<div class="card"><span class="k">Before a trade</span>
+<p>Research the market, examine the context and challenge your initial idea before committing capital.</p></div>
+<div class="card"><span class="k">When you have a trade idea</span>
+<p>Ask AI to find the weaknesses in your argument instead of simply asking it to confirm you&#8217;re right.</p></div>
+<div class="card"><span class="k">When you&#8217;re developing a strategy</span>
+<p>Use structured prompts to explore assumptions, scenarios, risks and potential weaknesses.</p></div>
+<div class="card"><span class="k">When you&#8217;re managing risk</span>
+<p>Calculate position size and understand exactly how much you&#8217;re putting at risk.</p></div>
+<div class="card"><span class="k">After the trade</span>
+<p>Record what happened and use AI to help identify patterns, mistakes and areas for improvement.</p></div>
+</div>
+<div class="note" style="margin-top:20px">The Toolkit isn&#8217;t designed to tell you what to trade.<br>
+<b style="color:var(--white)">It&#8217;s designed to improve the process you use to decide.</b></div>
+</section>
 
-            <label class="consent">
-              <input
-                type="checkbox"
-                id="ml-consent"
-                name="consent"
-                value="yes"
-                required
-              />
-              <span
-                >Yes, send me the Starter Pack and the follow-up lessons. I can
-                unsubscribe from any email, and my address will never be sold or
-                shared.</span
-              >
-            </label>
+<!-- 7 -->
+<section id="vault">
+<div class="label">The Prompt Vault</div>
+<h2>42 prompts. One structured workflow.</h2>
+<p>The Prompt Vault isn&#8217;t a list of random questions for ChatGPT. The prompts are organised around the way you actually trade.</p>
+<div class="vault">
+<div class="card acc" style="--a:#5B8EEA"><span class="k">Research</span>
+<ul><li>Market context</li><li>Macro analysis</li><li>Fundamental research</li><li>News and event analysis</li></ul></div>
+<div class="card acc" style="--a:#EC745B"><span class="k">Challenge</span>
+<ul><li>Challenge my thesis</li><li>Find weaknesses</li><li>Identify assumptions</li><li>Look for confirmation bias</li><li>Present the bear case</li></ul></div>
+<div class="card acc" style="--a:#A98BF5"><span class="k">Strategy</span>
+<ul><li>Develop and test ideas</li><li>Explore scenarios</li><li>Examine risk and reward</li><li>Question the underlying assumptions</li></ul></div>
+<div class="card acc" style="--a:#4E8CF7"><span class="k">Trade Preparation</span>
+<ul><li>Build a pre-trade case</li><li>Identify invalidation points</li><li>Examine potential catalysts</li><li>Review the risk</li></ul></div>
+<div class="card acc" style="--a:#E07C2A"><span class="k">Review</span>
+<ul><li>Analyse the trade</li><li>Identify mistakes</li><li>Find recurring patterns</li><li>Improve the process</li></ul></div>
+</div>
+<div class="rule">Every prompt has a purpose. The aim isn&#8217;t to ask AI more questions.<br>
+<b>It&#8217;s to ask better ones.</b></div>
+</section>
 
-            <button type="submit" class="btn">Send me the Starter Pack</button>
-            <p class="trust">
-              Double opt-in is on. You&#8217;ll get a confirmation email
-              first,<br />and the download arrives the moment you click it.
-            </p>
-            <p
-              id="form-error"
-              class="trust"
-              style="color: var(--red); display: none"
-            ></p>
-          </form>
-        </div>
-      </div>
+<!-- 8 -->
+<section id="who">
+<div class="label">Fit</div>
+<h2>Who is The Sceptic&#8217;s Toolkit for?</h2>
+<div class="two">
+<div class="pane"><div class="h">It&#8217;s for traders who&#8230;</div><ul>
+<li>Already use ChatGPT, Claude or another AI tool but aren&#8217;t sure how to use it effectively for trading.</li>
+<li>Want a structured research process rather than random prompts.</li>
+<li>Want AI to challenge their ideas instead of constantly agreeing with them.</li>
+<li>Want to improve their risk management and position sizing.</li>
+<li>Want to become more consistent in how they prepare and review trades.</li>
+<li>Understand that better information doesn&#8217;t automatically mean better decisions.</li>
+</ul></div>
+<div class="pane no"><div class="h">It isn&#8217;t for traders who&#8230;</div><ul>
+<li>Want guaranteed profits.</li>
+<li>Want buy and sell signals.</li>
+<li>Want an AI to trade for them.</li>
+<li>Are looking for a magic strategy.</li>
+<li>Believe a chatbot can predict the market.</li>
+</ul></div>
+</div>
+<p style="margin-top:20px">If you&#8217;re looking for certainty, this probably isn&#8217;t for you.</p>
+<p class="said">If you&#8217;re looking for a better process, you&#8217;re in the right place.</p>
+</section>
 
-      <div class="rule"></div>
+<!-- 9 -->
+<section id="compare">
+<div class="label">Compare</div>
+<h2>The Starter Pack shows you the method. The Toolkit gives you the system.</h2>
+<div class="tblwrap">
+<table>
+<thead><tr><th scope="col">&nbsp;</th><th scope="col">Starter Pack</th><th scope="col">The Sceptic&#8217;s Toolkit</th></tr></thead>
+<tbody>
+<tr><th scope="row">Introduction to the Sceptic&#8217;s Method</th><td class="on">&#10003;</td><td class="on">&#10003;</td></tr>
+<tr><th scope="row">Practical AI prompts</th><td>6</td><td><b>42</b></td></tr>
+<tr><th scope="row">Risk Cheat Sheet</th><td class="on">&#10003;</td><td><b>Expanded</b></td></tr>
+<tr><th scope="row">AI Trading guide</th><td>&#8212;</td><td><b>20 pages</b></td></tr>
+<tr><th scope="row">Trade Checklist</th><td>&#8212;</td><td class="on">&#10003;</td></tr>
+<tr><th scope="row">Position Size Calculator</th><td>&#8212;</td><td class="on">&#10003;</td></tr>
+<tr><th scope="row">Excel Trading Journal</th><td>&#8212;</td><td class="on">&#10003;</td></tr>
+<tr><th scope="row">Notion Trading Journal</th><td>&#8212;</td><td class="on">&#10003;</td></tr>
+<tr><th scope="row">Complete workflow</th><td>&#8212;</td><td><b>&#10003;</b></td></tr>
+<tr><th scope="row">Lifetime access</th><td class="on">&#10003;</td><td><b>&#10003;</b></td></tr>
+</tbody></table>
+</div>
+<h3 style="margin-top:26px;font-size:18px">Start for free. Upgrade when you&#8217;re ready.</h3>
+<div class="cta">
+<a class="btn" href="#starter">Get the Free Starter Pack</a>
+<a class="btn ghost" href="STORE_LINK">Get The Sceptic&#8217;s Toolkit &mdash; &pound;89</a>
+</div>
+</section>
 
-      <!-- ============ WHAT'S INSIDE ============ -->
-      <section>
-        <div class="seclabel">What&#8217;s inside</div>
-        <h2>Six pages. Nothing padded.</h2>
-        <p class="lede">
-          Every prompt keeps its original number from the Prompt Vault, so if
-          you upgrade later you already know where things live.
-        </p>
+<!-- 10 -->
+<section id="price">
+<div class="label">Price</div>
+<h2>One payment. No subscription. No upsell treadmill.</h2>
+<p>The Toolkit costs &pound;89. That&#8217;s it. You get the complete Toolkit and lifetime access to the version you purchase.</p>
+<div class="tight" style="margin-bottom:13px">
+<p>No monthly subscription.</p>
+<p>No expensive coaching package waiting behind it.</p>
+<p>No signals to sell you.</p>
+<p>No promise that the Toolkit will make you profitable.</p>
+</div>
+<p>Because that&#8217;s not what this is. It&#8217;s a practical system for using AI to improve the way you research, question and review your trading decisions.</p>
+<p>If that process helps you avoid even one poorly considered trade, improve one part of your preparation or save hours of research, the Toolkit has already earned its place on your desk.</p>
+<div class="price">
+<div class="fig">&pound;89</div>
+<div class="terms">Lifetime access &middot; One payment</div>
+<div class="cta"><a class="btn" href="STORE_LINK">Get The Sceptic&#8217;s Toolkit</a></div>
+</div>
+</section>
 
-        <div class="pages">
-          <div class="pg" style="--tag: var(--learn)">
-            <div class="n">Page 01</div>
-            <h3>Cover and contents</h3>
-            <p>
-              What this pack is, what it deliberately isn&#8217;t, and the one
-              rule that makes an AI useful instead of dangerous.
-            </p>
-            <span class="tag">Learn</span>
-          </div>
-          <div class="pg" style="--tag: var(--learn)">
-            <div class="n">Page 02</div>
-            <h3>The five-minute challenge</h3>
-            <p>
-              How to use the prompts, then a single exercise: take one
-              instrument you already watch and run it through prompt 14 before
-              you do anything else.
-            </p>
-            <span class="tag">Learn</span>
-          </div>
-          <div class="pg" style="--tag: var(--build)">
-            <div class="n">Page 03</div>
-            <h3>Prompts, part one</h3>
-            <p>
-              Three prompts for research and strategy, plus a worked example
-              showing what a good answer actually looks like so you can spot a
-              bad one.
-            </p>
-            <span class="tag">Build</span>
-          </div>
-          <div class="pg" style="--tag: var(--improve)">
-            <div class="n">Page 04</div>
-            <h3>Prompts, part two</h3>
-            <p>
-              Three more prompts covering backtest scepticism, journal review,
-              and a bonus daily macro calendar routine that takes two minutes.
-            </p>
-            <span class="tag">Improve</span>
-          </div>
-          <div class="pg" style="--tag: var(--test)">
-            <div class="n">Page 05</div>
-            <h3>The one-page risk sheet</h3>
-            <p>
-              The 1% rule, expectancy, position sizing, reward-to-risk, and
-              drawdown. Condensed from the full Risk Cheat Sheet onto a single
-              printable page.
-            </p>
-            <span class="tag">Test</span>
-          </div>
-          <div class="pg">
-            <div class="n">Page 06</div>
-            <h3>What the full toolkit adds</h3>
-            <p>
-              An honest side-by-side of what you have for free and what the paid
-              toolkit covers. Read it, or ignore it. The five pages before it
-              stand on their own.
-            </p>
-            <span class="tag">Reference</span>
-          </div>
-        </div>
-      </section>
+<!-- 11 -->
+<section id="faq">
+<div class="label">Questions</div>
+<h2>Frequently asked questions</h2>
+<div class="faq">
+<details><summary>Do I need to pay for ChatGPT or Claude?</summary>
+<div class="a"><p>No. The prompts can be adapted for ChatGPT, Claude, Gemini and other AI tools.</p></div></details>
+<details><summary>Does the Toolkit give trading signals?</summary>
+<div class="a"><p>No.</p><p>The Toolkit is designed to improve your research and decision-making process. It does not provide buy or sell signals.</p></div></details>
+<details><summary>Will it tell me what to trade?</summary>
+<div class="a"><p>No.</p><p>That&#8217;s deliberately not what we&#8217;re trying to do. The aim is to help you examine your own ideas more critically.</p></div></details>
+<details><summary>Is this suitable for beginners?</summary>
+<div class="a"><p>Yes, although you don&#8217;t need to be a complete beginner to benefit from it.</p><p>If you already trade, the Toolkit can be incorporated into the research and review process you&#8217;re already using.</p></div></details>
+<details><summary>Do I need to know how to use AI?</summary>
+<div class="a"><p>No.</p><p>The prompts are designed to be practical and easy to follow.</p></div></details>
+<details><summary>Is there a subscription?</summary>
+<div class="a"><p>No.</p><p>The Toolkit is a one-time purchase of &pound;89 with lifetime access to the version you purchase.</p></div></details>
+<details><summary>Will it make me profitable?</summary>
+<div class="a"><p>There are no guarantees of that, and anyone promising otherwise should make you sceptical.</p><p>Markets are uncertain. The Toolkit is designed to improve your process, not promise an outcome.</p></div></details>
+<details><summary>Can I see it before I buy?</summary>
+<div class="a"><p>Yes.</p><p>Start with the free Starter Pack and try the approach for yourself.</p></div></details>
+</div>
+<div class="cta"><a class="btn ghost" href="#starter">Get the Free Starter Pack</a></div>
+</section>
 
-      <div class="rule"></div>
+<!-- 12 -->
+<section id="close">
+<div class="label">Where this leaves you</div>
+<h2>Stop asking AI what to trade. Start using it to think better.</h2>
+<p>The Sceptic&#8217;s Toolkit gives you the prompts, processes and practical tools to build AI into your trading workflow without handing over your judgement.</p>
+<div class="tight" style="margin-bottom:13px">
+<p>Research better.</p>
+<p>Question more.</p>
+<p>Challenge your assumptions.</p>
+<p>Manage your risk.</p>
+<p>Review your decisions.</p>
+<p class="said">And stay sceptical.</p>
+</div>
+<div class="price">
+<div class="terms" style="margin:0 0 9px">The Sceptic&#8217;s Toolkit</div>
+<div class="fig">&pound;89</div>
+<div class="terms">One payment &middot; Lifetime access</div>
+<div class="cta"><a class="btn" href="STORE_LINK">Get The Sceptic&#8217;s Toolkit</a></div>
+<p class="aside" style="text-align:center">Not ready? <a href="#starter" style="color:var(--gold)">Try the Free Starter Pack</a></p>
+</div>
+</section>
 
-      <!-- ============ THE MAP ============ -->
-      <section>
-        <div class="seclabel">Why this exists</div>
-        <h2>Four very different things wear the same badge.</h2>
-        <p class="lede">
-          When someone says &#8220;I use AI to trade,&#8221; they mean one of
-          these. The risks are not remotely comparable. Learn to place any claim
-          on this map before you trust it.
-        </p>
+<!-- 13 -->
+<section id="promise">
+<div class="label">The Sceptic&#8217;s Promise</div>
+<div class="promise tight">
+<p>We won&#8217;t tell you that AI can predict the market.</p>
+<p>We won&#8217;t sell you guaranteed returns.</p>
+<p>We won&#8217;t pretend that a clever prompt is a trading strategy.</p>
+<p>And we won&#8217;t ask you to switch off your judgement.</p>
+<p style="margin-top:13px">We&#8217;ll give you better tools for questioning what you think you know.</p>
+<p>Because in trading, being sceptical isn&#8217;t a disadvantage.</p>
+<p class="said">It&#8217;s part of the edge.</p>
+</div>
+<div class="rule">Do I understand why? &middot; Can I verify it? &middot;
+What if it&#8217;s wrong?<br><b>If you can&#8217;t answer all three, you don&#8217;t act yet.</b></div>
+</section>
 
-        <div class="map">
-          <div class="mp ok">
-            <div class="lab">Start here</div>
-            <h3>Language models</h3>
-            <p>
-              ChatGPT, Claude, Gemini. They read, explain, summarise, and code
-              in plain English. Your research analyst and tutor.
-            </p>
-            <div class="verdict">
-              ✓ 90% of the value, low risk, high learning
-            </div>
-          </div>
-          <div class="mp mid">
-            <div class="lab">Later</div>
-            <h3>Machine-learning models</h3>
-            <p>
-              Statistical models trained to forecast or classify. Powerful, and
-              the fastest way to fool yourself.
-            </p>
-            <div class="verdict">→ Powerful, and easy to misread</div>
-          </div>
-          <div class="mp mid">
-            <div class="lab">Earn it first</div>
-            <h3>Algorithmic bots</h3>
-            <p>
-              Software that executes a defined strategy automatically. The
-              &#8220;AI&#8221; label is often just marketing.
-            </p>
-            <div class="verdict">
-              → Only once you can trade the rules by hand
-            </div>
-          </div>
-          <div class="mp bad">
-            <div class="lab">Assume scam</div>
-            <h3>&#8220;AI signals&#8221; sold to you</h3>
-            <p>
-              Someone else&#8217;s black box promising returns. You can&#8217;t
-              inspect it, so you can&#8217;t trust it.
-            </p>
-            <div class="verdict">✗ Assume a scam until proven otherwise</div>
-          </div>
-        </div>
+<footer>
+Educational content, not financial advice. Most retail traders lose money.
+Practise on a demo account and only risk what you can afford to lose.<br>
+An AI is your analyst, not your decision-maker. Verify everything.<br>
+<a href="/p/">Prompt library</a> &middot; <a href="/privacy.html">Privacy</a> &middot;
+<a href="/terms.html">Terms</a><br>
+&copy; 2026 The Sceptic&#8217;s Desk.
+</footer>
 
-        <div class="keyidea">
-          The Starter Pack, and everything else on this desk, is about the first
-          box: an assistant you supervise. The moment &#8220;AI&#8221; means
-          &#8220;a black box that trades my money for me,&#8221; you have left
-          the safe zone. Nothing here sells signals, publishes returns, or
-          touches your money.
-        </div>
-      </section>
-
-      <div class="rule"></div>
-
-      <!-- ============ UPGRADE ============ -->
-      <section>
-        <div class="seclabel">If you want the rest</div>
-        <div class="upgrade">
-          <div>
-            <h2>The Sceptic&#8217;s Toolkit</h2>
-            <p class="lede">
-              The 20-page flagship guide plus five working tools. Read the free
-              pack first. If it changes how you ask questions, this is the whole
-              method.
-            </p>
-            <ul>
-              <li>AI Trading, Demystified · 20 pages</li>
-              <li>The Sceptic&#8217;s Prompt Vault · 42 prompts</li>
-              <li>The Sceptic&#8217;s Trade Checklist</li>
-              <li>The Sceptic&#8217;s Risk Cheat Sheet</li>
-              <li>The Sceptic&#8217;s Position Size Calculator</li>
-              <li>The Sceptic&#8217;s Journal · Excel and Notion</li>
-            </ul>
-          </div>
-          <div class="buy">
-            <div class="amt">£89</div>
-            <span class="cur">One payment, lifetime access</span>
-            <!-- SETUP: replace with your Whop or Gumroad product URL -->
-            <a class="btn ghost" href="STORE_LINK"
-              >See what&#8217;s in the toolkit</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <div class="rule"></div>
-
-      <!-- ============ FAQ ============ -->
-      <section class="tight">
-        <div class="seclabel">Before you sign up</div>
-        <h2>Fair questions.</h2>
-        <div class="faq">
-          <details open>
-            <summary>Is it actually free, or free until a paywall?</summary>
-            <p>
-              Free. Six pages, no card, no trial. The only thing it costs you is
-              an email address, which is how the pack reaches you and how the
-              four follow-up lessons arrive. After those, the sequence stops.
-            </p>
-          </details>
-          <details>
-            <summary>What happens to my email address?</summary>
-            <p>
-              It is stored with the email platform that sends these messages,
-              and it is used to send you the pack, the four lessons, and
-              occasional notes about new material. It is never sold, rented, or
-              shared. Every email carries an unsubscribe link, and unsubscribing
-              removes you immediately.
-            </p>
-            <p>
-              Double opt-in is switched on, so nothing is sent until you click a
-              confirmation link. If you never click, you never hear from this
-              address again.
-            </p>
-          </details>
-          <details>
-            <summary>Do I need a paid AI subscription?</summary>
-            <p>
-              No. Every prompt in the pack runs on the free tier of ChatGPT,
-              Claude, or Gemini. The prompts are deliberately tool-agnostic, so
-              they work the same wherever you paste them.
-            </p>
-          </details>
-          <details>
-            <summary>Am I too much of a beginner for this?</summary>
-            <p>
-              The pack is written for beginners, in plain English, with the
-              blanks highlighted so you know exactly what to fill in. If you
-              have never used an AI assistant for anything, page 2 is your
-              starting point.
-            </p>
-          </details>
-          <details>
-            <summary>Is any of this financial advice?</summary>
-            <p>
-              No. This is educational content, not financial advice. Nothing
-              here recommends an instrument, a trade, or a position. There are
-              no signals, no performance figures, and no claims about what you
-              will earn. Most retail traders lose money, and no prompt changes
-              that. Trading carries the risk of losing your capital.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <footer>
-        <div class="cols">
-          <p class="disc">
-            Educational content, not financial advice. The Sceptic&#8217;s Desk
-            publishes educational material about using AI tools for research,
-            strategy design, and record-keeping. It does not provide investment
-            advice, personal recommendations, or signals, and it does not manage
-            money. Trading involves risk and you can lose more than you deposit
-            with leveraged products.<br /><br />
-            &copy; 2026 The Sceptic&#8217;s Desk · scepticsdesk.com
-          </p>
-          <div class="links">
-            <a href="#get">Get the pack</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="mailto:hello@scepticsdesk.com">Contact</a>
-          </div>
-        </div>
-      </footer>
-    </div>
-
-    <script>
-      /* Submits to MailerLite in the background, then sends the reader to
-   confirm.html. Without this, MailerLite shows its own success screen and
-   the reader never sees the branded "check your inbox" page.
-   If JavaScript is off, the form still posts normally and MailerLite handles it. */
-      (function () {
-        var f = document.getElementById("starter-form");
-        if (!f) return;
-
-        var CONFIRM_URL =
-          "confirm.html"; /* where people land after submitting */
-        var err = document.getElementById("form-error");
-
-        function fail(msg, el) {
-          err.textContent = msg;
-          err.style.display = "block";
-          if (el) el.focus();
-        }
-
-        f.addEventListener("submit", function (e) {
-          var email = document.getElementById("ml-email");
-          var consent = document.getElementById("ml-consent");
-          var honey = document.getElementById("website");
-          err.style.display = "none";
-
-          if (!email.value || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value)) {
-            e.preventDefault();
-            return fail(
-              "That email address does not look right. Check it and try again.",
-              email,
-            );
-          }
-          if (!consent.checked) {
-            e.preventDefault();
-            return fail(
-              "Tick the consent box and the pack is on its way.",
-              consent,
-            );
-          }
-
-          /* Honeypot filled means a bot. Look successful, send nothing. */
-          if (honey.value) {
-            e.preventDefault();
-            window.location.href = CONFIRM_URL;
-            return;
-          }
-
-          if (!window.fetch || f.action.indexOf("ACTION_URL") > -1)
-            return; /* fall back to a normal POST */
-
-          e.preventDefault();
-          var btn = f.querySelector("button[type=submit]");
-          btn.textContent = "Sending…";
-          btn.disabled = true;
-
-          fetch(f.action, {
-            method: "POST",
-            body: new FormData(f),
-            mode: "no-cors",
-          })
-            .then(function () {
-              window.location.href = CONFIRM_URL;
-            })
-            .catch(function () {
-              btn.textContent = "Send me the Starter Pack";
-              btn.disabled = false;
-              fail(
-                "That did not go through. Try again, or email hello@scepticsdesk.com and it will be sorted by hand.",
-              );
-            });
-        });
-      })();
-    </script>
-  </body>
-</html>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('starter');
+  if(!f) return;
+  var i=document.getElementById('email');
+  function arrive(){
+    f.classList.add('lit');
+    setTimeout(function(){try{i.focus({preventScroll:true});}catch(e){i.focus();}},420);
+    setTimeout(function(){f.classList.remove('lit');},2600);
+  }
+  document.querySelectorAll('a[href="#starter"]').forEach(function(a){
+    a.addEventListener('click',arrive);
+  });
+})();
+</script>
+</body></html>
