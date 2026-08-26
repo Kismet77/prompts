@@ -278,7 +278,7 @@ Numbered as they appear in the full Prompt Vault, so nothing has to be re-learne
 <div class="hform">
 <!-- MAILERLITE: replace the action below with your form endpoint, or paste your MailerLite
      embed in place of this whole <form> block. Field names must match your MailerLite fields. -->
-<form class="signup" id="starter" action="https://assets.mailerlite.com/jsonp/2560096/forms/195324836651729981/subscribe" data-code="" method="post" target="_blank">
+<form class="signup" id="starter" action="https://assets.mailerlite.com/jsonp/2560096/forms/195324836651729981/subscribe" data-code="" method="post">
 <label for="email">Send it to me</label>
 <div class="fig">&pound;0 <span>Always free</span></div>
 <p class="intro">Enter your email and the pack lands in your inbox. You&#8217;ll get four short lessons over the following week, then it stops.</p>
@@ -613,6 +613,27 @@ The Sceptic's Desk is a trading name of <strong>Fiona Soares</strong>, sole trad
   document.querySelectorAll('a[href="#starter"]').forEach(function(a){
     a.addEventListener('click',arrive);
   });
+
+    f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = f.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+    var body = new URLSearchParams();
+    body.append('fields[email]', f.querySelector('#email').value);
+    body.append('fields[name]', f.querySelector('#fname').value);
+    body.append('ml-submit', '1');
+    body.append('anticsrf', 'true');
+    fetch(f.action, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString()
+    }).catch(function(){}).then(function(){
+      window.location.href = '/confirm.html';
+    });
+  });
 })();
+
+  
 </script>
 </body></html>
