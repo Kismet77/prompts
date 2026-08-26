@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Sceptic&#8217;s Starter Pack &#183; The Prompts</title>
+<meta name="description" content="The five prompts from The Sceptic&#8217;s Starter Pack, plus the bonus, ready to copy on any device.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1636;--navy2:#101E44;--navy3:#0A1430;--line:#26315A;--line2:#1B274C;
+  --gold:#EFAF43;--gold-soft:#ECC165;--gold-dim:rgba(239,175,67,.13);
+  --green:#32D48B;--white:#F4F7FF;--body:#B7C1DB;--muted:#828DAF;--faint:#5C668C;
+  --sans:'Space Grotesk',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+}
+/* Each prompt keeps the colour of its category in the full Vault */
+[data-cat="learn-understand"]{--c:#5B8EEA;--ct:rgba(91,142,234,.15);--cb:rgba(91,142,234,.6)}
+[data-cat="research-news"]{--c:#4FC3F0;--ct:rgba(79,195,240,.15);--cb:rgba(79,195,240,.6)}
+[data-cat="strategy"]{--c:#A98BF5;--ct:rgba(169,139,245,.15);--cb:rgba(169,139,245,.6)}
+[data-cat="backtest"]{--c:#3ED68A;--ct:rgba(62,214,138,.15);--cb:rgba(62,214,138,.6)}
+[data-cat="risk"]{--c:#EFAF43;--ct:rgba(239,175,67,.15);--cb:rgba(239,175,67,.6)}
+[data-cat="review"]{--c:#EC8A5B;--ct:rgba(236,138,91,.15);--cb:rgba(236,138,91,.6)}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{font-family:var(--sans);background:var(--navy);color:var(--body);line-height:1.5;
+  background-image:linear-gradient(rgba(123,150,220,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(123,150,220,.05) 1px,transparent 1px);
+  background-size:27px 27px;-webkit-font-smoothing:antialiased;padding-bottom:52px}
+a{color:var(--gold-soft)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:5px}
+.xh{position:fixed;width:22px;height:22px;z-index:1;pointer-events:none}
+.xh.tl{top:14px;left:14px}.xh.tr{top:14px;right:14px}
+.wrap{max-width:860px;margin:0 auto;padding:34px 26px 0}
+
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.wordmark .the{font-family:var(--mono);font-size:9px;letter-spacing:.34em;color:var(--gold);display:block;margin-bottom:3px}
+.wordmark .tb{font-weight:700;font-size:17px;color:var(--white);letter-spacing:.02em;line-height:1}
+.wordmark .desc{font-family:var(--mono);font-size:7.5px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin-top:7px;padding-top:6px;border-top:1px solid var(--line);display:inline-block}
+.ed{font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:var(--faint);text-transform:uppercase;text-align:right;padding-top:4px}
+
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin:30px 0 8px}
+h1{font-size:32px;font-weight:700;color:var(--white);letter-spacing:-.01em;line-height:1.06}
+h1 .g{color:var(--gold)}
+.phil{font-weight:600;font-size:17px;color:var(--gold);margin:12px 0 0}
+.sub{font-size:14px;color:#AEB8D6;margin:14px 0 0;max-width:64ch}
+
+.how{background:var(--navy2);border:1px solid var(--line);border-radius:13px;padding:17px 19px;margin-top:22px}
+.how h2{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:9px}
+.how p{font-size:13px;max-width:64ch}
+.how p+p{margin-top:8px}
+.how b{color:var(--white);font-weight:500}
+
+h2.sec{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+  font-weight:400;margin:34px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--line2);position:relative}
+h2.sec::after{content:"";position:absolute;left:0;bottom:-1px;width:110px;height:1px;background:var(--gold)}
+
+.p{background:var(--navy2);border:1px solid var(--line);border-left:3px solid var(--c);border-radius:13px;
+  padding:17px 19px 13px;margin-bottom:11px}
+.p-head{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-bottom:11px}
+.step{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);
+  background:var(--c);border-radius:5px;padding:3px 8px;flex:none;font-weight:700}
+.step.bonus{background:none;color:var(--c);border:1px dashed var(--c);font-weight:400}
+.p-head h3{font-size:15px;font-weight:600;color:var(--white);letter-spacing:.01em;flex:1;line-height:1.3;min-width:180px}
+.cat{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--c);
+  border:1px solid currentColor;border-radius:5px;padding:3px 7px;flex:none;opacity:.85}
+.p-t{font-family:var(--mono);font-size:12.5px;line-height:1.75;color:#C9D2EA;background:var(--navy3);
+  border:1px solid var(--line2);border-radius:9px;padding:13px 15px}
+.p-t mark{background:var(--ct);color:var(--c);border-bottom:1px dashed var(--cb);border-radius:3px;padding:1px 2px}
+.p-note{font-size:12px;color:var(--muted);margin-top:9px;padding-left:11px;border-left:2px solid var(--line);max-width:60ch}
+.p-foot{display:flex;align-items:center;gap:12px;margin-top:11px}
+.copy{background:var(--navy3);border:1px solid var(--line);color:var(--body);font-family:var(--mono);font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;padding:9px 15px;border-radius:8px;cursor:pointer;transition:.15s}
+.copy:hover{border-color:var(--c);color:var(--c)}
+.copy.done{background:rgba(50,212,139,.13);border-color:var(--green);color:var(--green)}
+.ref{margin-left:auto;font-family:var(--mono);font-size:9.5px;color:var(--faint);letter-spacing:.04em}
+
+.more{background:var(--navy2);border:1px solid var(--gold);border-radius:13px;padding:21px 22px;margin-top:34px}
+.more h2{font-size:18px;font-weight:700;color:var(--white);margin-bottom:8px;letter-spacing:-.005em}
+.more p{font-size:13.5px;max-width:62ch}
+.more p+p{margin-top:9px}
+.more ul{list-style:none;display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 16px}
+.more li{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--muted);background:var(--navy3);
+  border:1px solid var(--line);border-radius:7px;padding:6px 10px}
+.cta{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  text-decoration:none;padding:12px 20px;border-radius:9px;background:var(--gold);color:var(--navy);font-weight:500;transition:.15s}
+.cta:hover{background:var(--gold-soft)}
+/* Unset destination. Deliberately loud so it cannot ship unnoticed. */
+.cta.todo{background:none;border:1px dashed #EC745B;color:#EC745B;cursor:not-allowed}
+.cta.todo:hover{background:none}
+
+.foot{max-width:860px;margin:28px auto 0;padding:0 26px;font-family:var(--mono);font-size:9.5px;color:var(--faint);
+  line-height:1.7;letter-spacing:.02em}
+.foot a{color:var(--faint)}
+
+@media(max-width:720px){
+  .wrap{padding:26px 18px 0}.foot{padding:0 18px}
+  h1{font-size:25px}
+  .xh{display:none}
+  .p{padding:15px 15px 12px 13px}
+  .p-t{font-size:12px;padding:11px 12px;line-height:1.7}
+  .p-head h3{font-size:14px;min-width:0}
+  .ref{width:100%;margin:6px 0 0;text-align:left}
+  .p-foot{flex-wrap:wrap}
+  .cta{display:block;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style></head>
+<body>
+<span class="xh tl"><svg viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="4.2" stroke="#EFAF43" stroke-width="1.1"/><path d="M11 0v6M11 16v6M0 11h6M16 11h6" stroke="#EFAF43" stroke-width="1.1"/></svg></span>
+<span class="xh tr"><svg viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="4.2" stroke="#EFAF43" stroke-width="1.1"/><path d="M11 0v6M11 16v6M0 11h6M16 11h6" stroke="#EFAF43" stroke-width="1.1"/></svg></span>
+
+<div class="wrap">
+  <header>
+    <div class="wordmark"><span class="the">THE</span><div class="tb">SCEPTIC&#8217;S<br>DESK</div><div class="desc">AI Trading, Demystified</div></div>
+    <div class="ed">Starter Pack<br>Edition 2026 &#183; v1.0</div>
+  </header>
+
+  <div class="eyebrow">Five prompts + one bonus</div>
+  <h1>The Sceptic&#8217;s <span class="g">Starter Pack</span></h1>
+  <div class="phil">&#8220;Better questions create better traders.&#8221;</div>
+  <p class="sub">The prompts from your Starter Pack, ready to copy on whatever device you have to hand. Each one asks an AI to argue with you at a different stage: your belief, your strategy, your backtest, your size, and your record.</p>
+
+  <div class="how">
+    <h2>Before you paste</h2>
+    <p>Swap anything in <b>[square brackets]</b> for your own detail. The more specific you are, the less generic the answer.</p>
+    <p>These work in any assistant. Every answer is a draft, not a fact: check numbers, quotes, and code against a real source before you act on them.</p>
+  </div>
+
+  <h2 class="sec">The five</h2>
+<article class="p" id="p5" data-cat="learn-understand">
+  <div class="p-head">
+    <span class="step">Your belief</span>
+    <h3>Why would a pro disagree?</h3>
+    <span class="cat">Learning &amp; understanding</span>
+  </div>
+  <p class="p-t">I believe <mark>[a trading belief I hold]</mark>. Give me the strongest case an experienced trader would make against it, and what evidence would tell me I’m wrong.</p>
+  
+  <div class="p-foot">
+    <button type="button" class="copy" data-target="p5">Copy prompt</button>
+    <span class="ref">#5 in the full Vault</span>
+  </div>
+</article>
+<article class="p" id="p14" data-cat="strategy">
+  <div class="p-head">
+    <span class="step">Your strategy</span>
+    <h3>Devil’s advocate</h3>
+    <span class="cat">Strategy building</span>
+  </div>
+  <p class="p-t">Argue as hard as you can against this strategy. In what conditions does it lose? Worst realistic losing streak? Hidden costs? Is it fitted to a story, or is there a real reason it works? Be blunt. <mark>[strategy]</mark></p>
+  
+  <div class="p-foot">
+    <button type="button" class="copy" data-target="p14">Copy prompt</button>
+    <span class="ref">#14 in the full Vault</span>
+  </div>
+</article>
+<article class="p" id="p26" data-cat="backtest">
+  <div class="p-head">
+    <span class="step">Your backtest</span>
+    <h3>Overfitting audit</h3>
+    <span class="cat">Backtesting</span>
+  </div>
+  <p class="p-t">Assume I’ve fooled myself. Find signs of overfitting or unrealistic assumptions in this backtest, and tell me how to test it out-of-sample. Be sceptical. <mark>[paste results + rules]</mark></p>
+  
+  <div class="p-foot">
+    <button type="button" class="copy" data-target="p26">Copy prompt</button>
+    <span class="ref">#26 in the full Vault</span>
+  </div>
+</article>
+<article class="p" id="p31" data-cat="risk">
+  <div class="p-head">
+    <span class="step">Your size</span>
+    <h3>Position size</h3>
+    <span class="cat">Risk &amp; sizing</span>
+  </div>
+  <p class="p-t">My account is <mark>[amount]</mark> and I risk 1% per trade. I want to <mark>[buy/sell]</mark> <mark>[instrument]</mark> at <mark>[entry]</mark> with a stop at <mark>[stop]</mark>. Work out cash at risk, stop distance, and exact size. Show the steps and state your assumptions.</p>
+  
+  <div class="p-foot">
+    <button type="button" class="copy" data-target="p31">Copy prompt</button>
+    <span class="ref">#31 in the full Vault</span>
+  </div>
+</article>
+<article class="p" id="p37" data-cat="review">
+  <div class="p-head">
+    <span class="step">Your record</span>
+    <h3>Journal review</h3>
+    <span class="cat">Review &amp; psychology</span>
+  </div>
+  <p class="p-t">Act as a blunt, experienced trading coach. From this journal, find where I make versus lose money, whether I follow my own rules, any emotional patterns, and my single highest-impact fix for next month. Use my real numbers. Don’t flatter me. <mark>[paste journal]</mark></p>
+  
+  <div class="p-foot">
+    <button type="button" class="copy" data-target="p37">Copy prompt</button>
+    <span class="ref">#37 in the full Vault</span>
+  </div>
+</article>
+
+  <h2 class="sec">The bonus</h2>
+<article class="p" id="p12" data-cat="research-news">
+  <div class="p-head">
+    <span class="step bonus">Bonus</span>
+    <h3>Macro calendar read · live web</h3>
+    <span class="cat">Research &amp; news</span>
+  </div>
+  <p class="p-t"><mark>[paste context block]</mark> Give me this week’s scheduled data and events for my markets that could cause volatility, ranked by likely impact. Cite sources. End with ‘what could make this read wrong’.</p>
+  <p class="p-note">Needs an AI with live web access, and it asks for sources. Check two of them before you let it change anything you do.</p>
+  <div class="p-foot">
+    <button type="button" class="copy" data-target="p12">Copy prompt</button>
+    <span class="ref">#12 in the full Vault</span>
+  </div>
+</article>
+
+  <section class="more">
+    <h2>These five are from a set of forty-two</h2>
+    <p>The Sceptic&#8217;s Prompt Vault covers seven categories across the whole workflow, and sits inside The Sceptic&#8217;s Toolkit alongside the Playbook, the Trade Checklist, the Risk Cheat Sheet, the Journal, and the Position Size Calculator.</p>
+    <ul>
+      <li>Learning &amp; understanding</li><li>Research &amp; news</li><li>Strategy building</li>
+      <li>Coding &amp; indicators</li><li>Backtesting</li><li>Risk &amp; sizing</li><li>Review &amp; psychology</li>
+    </ul>
+    <a class="cta todo" href="STORE_LINK" aria-disabled="true">Set link</a>
+  </section>
+</div>
+
+<p class="foot">
+  Educational content, not financial advice. Nothing here is a recommendation to buy or sell any instrument. Most retail traders lose money; only risk what you can afford to lose.<br>
+  Version 1.0 &#183; &#169; 2026 The Sceptic&#8217;s Desk &#183; <a href="/terms.html">Terms</a> &#183; <a href="/privacy.html">Privacy</a>
+</p>
+
+<script>
+(function(){
+  function write(text){
+    if(navigator.clipboard&&window.isSecureContext) return navigator.clipboard.writeText(text);
+    return new Promise(function(res,rej){
+      var t=document.createElement("textarea");
+      t.value=text;t.setAttribute("readonly","");t.style.position="fixed";t.style.top="-1000px";
+      document.body.appendChild(t);t.select();
+      var ok=false; try{ok=document.execCommand("copy");}catch(e){}
+      document.body.removeChild(t); ok?res():rej();
+    });
+  }
+  document.addEventListener("click",function(e){
+    var b=e.target.closest(".copy"); if(!b) return;
+    var host=document.getElementById(b.dataset.target).querySelector(".p-t"),
+        text=(host.textContent||"").replace(/\s+/g," ").trim(),
+        label=b.textContent;
+    write(text).then(function(){
+      b.classList.add("done"); b.textContent="Copied";
+      clearTimeout(b._t); b._t=setTimeout(function(){b.classList.remove("done");b.textContent=label;},1600);
+    }).catch(function(){
+      b.textContent="Press Ctrl+C";
+      clearTimeout(b._t); b._t=setTimeout(function(){b.textContent=label;},2200);
+    });
+  });
+})();
+</script>
+</body></html>
