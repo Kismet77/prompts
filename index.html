@@ -409,6 +409,189 @@ The Sceptic&#8217;s Desk is built around one simple principle:<br>
 <p>Record your trades, your reasoning and your results using the Excel or Notion version.</p></div>
 </div>
 <div class="rule">One system. Six working parts.<br>
+<style>
+.li-section{position:relative;padding:84px 0;border-top:1px solid rgba(232,236,246,.14)}
+.li-section::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(232,236,246,.045) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(232,236,246,.045) 1px,transparent 1px);
+  background-size:48px 48px}
+.li-wrap{position:relative;max-width:1160px;margin:0 auto;padding:0 24px;text-align:center}
+
+.li-eyebrow{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:#EFAF43;margin:0 0 16px}
+.li-h2{font-family:"Space Grotesk",system-ui,sans-serif;font-size:clamp(26px,3.8vw,40px);
+  line-height:1.14;font-weight:700;letter-spacing:-.02em;margin:0 0 14px;color:#E8ECF6}
+.li-h2 em{font-style:normal;color:#EFAF43}
+.li-lede{font-family:"Space Grotesk",system-ui,sans-serif;color:#8C99BC;font-size:16.5px;
+  line-height:1.6;max-width:60ch;margin:0 auto}
+
+.li-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;margin:52px 0 0;text-align:left}
+@media(max-width:1000px){.li-grid{grid-template-columns:repeat(3,1fr);gap:26px}}
+@media(max-width:600px){.li-grid{grid-template-columns:repeat(2,1fr);gap:20px}}
+
+.li-item{display:flex;flex-direction:column;background:none;border:0;padding:0;margin:0;
+  font-family:"Space Grotesk",system-ui,sans-serif;color:inherit;text-align:left;cursor:zoom-in}
+.li-item__frame{position:relative;aspect-ratio:3/4;border-radius:7px;overflow:hidden;
+  border:1px solid rgba(232,236,246,.16);background:#101E44;
+  box-shadow:0 12px 30px rgba(0,0,0,.45);transition:transform .2s ease,border-color .2s ease}
+.li-item__frame img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.li-item:hover .li-item__frame,.li-item:focus-visible .li-item__frame{
+  transform:translateY(-4px);border-color:var(--li-accent,#EFAF43)}
+.li-item__frame::after{content:"View";position:absolute;inset:auto 0 0 0;
+  font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:#0B1636;background:var(--li-accent,#EFAF43);padding:6px 0;text-align:center;
+  opacity:0;transition:opacity .2s ease}
+.li-item:hover .li-item__frame::after,.li-item:focus-visible .li-item__frame::after{opacity:1}
+
+.li-item__name{font-family:"Space Grotesk",system-ui,sans-serif;font-size:12.5px;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;color:#E8ECF6;margin:16px 0 5px;line-height:1.35}
+.li-item__kind{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--li-accent,#EFAF43);margin:0 0 9px}
+.li-item__desc{color:#8C99BC;font-size:13px;line-height:1.55;margin:0}
+
+.li-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 40px;margin-top:52px;
+  padding-top:26px;border-top:1px solid rgba(232,236,246,.14)}
+.li-bar span{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.13em;
+  text-transform:uppercase;color:#8C99BC;display:flex;align-items:center;gap:9px}
+.li-bar span::before{content:"";width:5px;height:5px;border-radius:50%;background:#EFAF43;flex:0 0 auto}
+
+/* lightbox */
+.li-lb{position:fixed;inset:0;z-index:90;display:none;place-items:center;
+  background:rgba(6,12,30,.94);padding:28px;backdrop-filter:blur(3px)}
+.li-lb.is-open{display:grid}
+.li-lb img{max-width:min(900px,93vw);max-height:82vh;width:auto;border-radius:8px;
+  border:1px solid rgba(232,236,246,.14);box-shadow:0 24px 70px rgba(0,0,0,.6)}
+.li-lb__cap{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:#8C99BC;text-align:center;margin-top:16px}
+.li-lb__x{position:absolute;top:18px;right:22px;background:none;border:1px solid rgba(232,236,246,.24);
+  color:#E8ECF6;border-radius:50%;width:40px;height:40px;font-size:19px;line-height:1;cursor:pointer}
+.li-lb__x:hover{border-color:#EFAF43;color:#EFAF43}
+</style>
+
+<section class="li-section" id="inside">
+  <div class="li-wrap">
+    <p class="li-eyebrow">Look inside</p>
+    <h2 class="li-h2">Before you spend £89, <em>see what £89 buys.</em></h2>
+    <p class="li-lede">Real pages from the actual products, not mock-ups of something we intend to build
+      later. Tap any one to read it full size.</p>
+
+    <div class="li-grid">
+
+      <button class="li-item" style="--li-accent:#EFAF43"
+              data-full="assets/previews/playbook-case-study.webp"
+              data-cap="AI Trading, Demystified · case study 01">
+        <span class="li-item__frame">
+          <img loading="lazy" src="assets/previews/tile-playbook.webp"
+               alt="A page from AI Trading, Demystified showing a worked case study" width="520" height="693">
+        </span>
+        <span class="li-item__name">AI Trading, Demystified</span>
+        <span class="li-item__kind">20-page guide</span>
+        <span class="li-item__desc">Where AI genuinely helps and where it quietly makes you worse. Four workflows, four case studies.</span>
+      </button>
+
+      <button class="li-item" style="--li-accent:#A98BF5"
+              data-full="assets/previews/vault-overfitting.webp"
+              data-cap="The Sceptic’s Prompt Vault · the overfitting audit">
+        <span class="li-item__frame">
+          <img loading="lazy" src="assets/previews/tile-vault.webp"
+               alt="A page from The Sceptic’s Prompt Vault showing backtesting prompts" width="520" height="693">
+        </span>
+        <span class="li-item__name">The Prompt Vault</span>
+        <span class="li-item__kind">42 prompts</span>
+        <span class="li-item__desc">Research markets, interrogate strategies, challenge assumptions and review performance.</span>
+      </button>
+
+      <button class="li-item" style="--li-accent:#4E8CF7"
+              data-full="assets/previews/checklist-pre-trade.webp"
+              data-cap="The Sceptic’s Trade Checklist · the pre-trade gates">
+        <span class="li-item__frame">
+          <img loading="lazy" src="assets/previews/tile-checklist.webp"
+               alt="The pre-trade checklist page" width="520" height="693">
+        </span>
+        <span class="li-item__name">Trade Checklist</span>
+        <span class="li-item__kind">Pre-trade process</span>
+        <span class="li-item__desc">A repeatable set of gates every trade has to pass before you take it.</span>
+      </button>
+
+      <button class="li-item" style="--li-accent:#2FBF71"
+              data-full="assets/previews/risk-one-page.webp"
+              data-cap="The Sceptic’s Risk Cheat Sheet · the one-page playbook">
+        <span class="li-item__frame">
+          <img loading="lazy" src="assets/previews/tile-risk.webp"
+               alt="The Sceptic’s Risk Cheat Sheet one-page reference" width="520" height="693">
+        </span>
+        <span class="li-item__name">Risk Cheat Sheet</span>
+        <span class="li-item__kind">One-page reference</span>
+        <span class="li-item__desc">Position sizing, expectancy, reward-to-risk and drawdown, all in one place.</span>
+      </button>
+
+      <button class="li-item" style="--li-accent:#1FB6C1"
+              data-full="assets/previews/calculator.webp"
+              data-cap="The Sceptic’s Position Size Calculator">
+        <span class="li-item__frame">
+          <img loading="lazy" src="assets/previews/tile-calculator.webp"
+               alt="The Sceptic’s Position Size Calculator" width="520" height="693">
+        </span>
+        <span class="li-item__name">Position Size Calculator</span>
+        <span class="li-item__kind">Risk to size</span>
+        <span class="li-item__desc">Four numbers in, one position size out. Shares, forex, indices and crypto.</span>
+      </button>
+
+      <button class="li-item" style="--li-accent:#E07C2A"
+              data-full="assets/previews/journal-dashboard.webp"
+              data-cap="The Sceptic’s Journal · dashboard tab">
+        <span class="li-item__frame">
+          <img loading="lazy" src="assets/previews/tile-journal.webp"
+               alt="The Sceptic’s Journal dashboard showing expectancy and drawdown" width="520" height="693">
+        </span>
+        <span class="li-item__name">Trading Journal</span>
+        <span class="li-item__kind">Excel and Notion</span>
+        <span class="li-item__desc">Log every trade, then find out whether your discipline is real or theoretical.</span>
+      </button>
+
+    </div>
+
+    <div class="li-bar">
+      <span>Instant download</span>
+      <span>Works with any AI tool</span>
+      <span>One payment, no subscription</span>
+      <span>Yours to keep</span>
+    </div>
+  </div>
+</section>
+
+<div class="li-lb" id="li-lb" role="dialog" aria-modal="true" aria-label="Product preview">
+  <button class="li-lb__x" id="li-lb-x" aria-label="Close preview">×</button>
+  <figure style="margin:0">
+    <img id="li-lb-img" src="" alt="">
+    <figcaption class="li-lb__cap" id="li-lb-cap"></figcaption>
+  </figure>
+</div>
+
+<script>
+(function(){
+  var lb=document.getElementById('li-lb'),img=document.getElementById('li-lb-img'),
+      cap=document.getElementById('li-lb-cap'),x=document.getElementById('li-lb-x'),last=null;
+  function open(btn){
+    last=btn; img.src=btn.dataset.full; img.alt=btn.querySelector('img').alt;
+    cap.textContent=btn.dataset.cap||''; lb.classList.add('is-open');
+    document.body.style.overflow='hidden'; x.focus();
+  }
+  function close(){
+    lb.classList.remove('is-open'); document.body.style.overflow=''; img.src='';
+    if(last) last.focus();
+  }
+  document.querySelectorAll('.li-item').forEach(function(b){
+    b.addEventListener('click',function(){open(b);});
+  });
+  x.addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&lb.classList.contains('is-open'))close();
+  });
+})();
+</script>
+
 <b>&pound;89 once. Lifetime access. No subscription.</b></div>
 <div class="cta"><a class="btn" href="https://store.scepticsdesk.com/l/toolkit">Get The Sceptic&#8217;s Toolkit</a></div>
 </section>
