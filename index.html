@@ -843,6 +843,24 @@ h2.display em{font-style:normal;color:var(--gold)}
 
 <script>
 (function(){
+     f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = f.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+    var body = new URLSearchParams();
+    body.append('fields[email]', f.querySelector('#email').value);
+    body.append('fields[name]', f.querySelector('#fname').value);
+    body.append('ml-submit', '1');
+    body.append('anticsrf', 'true');
+    fetch(f.action, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString()
+    }).catch(function(){}).then(function(){
+      window.location.href = '/confirm.html';
+    });
+  });
   var lb=document.getElementById('lb'),i=document.getElementById('lbi'),
       c=document.getElementById('lbc'),x=document.getElementById('lbx'),last=null;
   function open(b){last=b;i.src=b.dataset.full;i.alt=b.querySelector('img').alt;
