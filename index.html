@@ -861,8 +861,8 @@ document.addEventListener('DOMContentLoaded', function(){
     var btn = f.querySelector('button[type="submit"]');
     if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
     var body = new URLSearchParams();
-    body.append('fields[email]', f.querySelector('#email').value);
-    body.append('fields[name]', f.querySelector('#fname').value);
+    body.append('fields[email]', f.querySelector('[name="fields[email]"]').value);
+  body.append('fields[name]',  f.querySelector('[name="fields[name]"]').value);
     body.append('ml-submit', '1');
     body.append('anticsrf', 'true');
     fetch(f.action, {
