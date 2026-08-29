@@ -394,7 +394,7 @@ h2.display em{font-style:normal;color:var(--gold)}
         <!-- TODO ▸ replace this block with your live MailerLite form markup
              (action, hidden fields and field names). The classes below will
              style it as-is; only the wrapper needs to change. -->
-        <form class="signup" id="starter" action="https://assets.mailerlite.com/jsonp/2560096/forms/195324836651729981/subscribe" data-code="" method="post">
+        <form class="signup" id="starter-section" action="https://assets.mailerlite.com/jsonp/2560096/forms/195324836651729981/subscribe" data-code="" method="post">
           <div class="field">
             <label for="fn">First name</label>
             <input id="fn" type="text" name="fields[name]" autocomplete="given-name" placeholder="John">
@@ -829,7 +829,7 @@ h2.display em{font-style:normal;color:var(--gold)}
           Wales. Suite 723, 80A Ruskin Avenue, Welling DA16 3QQ. info@scepticsdesk.com</p>
       </div>
       <div>
-        <p><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+        <p><="/privacy.html">Privacy</a> · <="/terms.html">Terms</a></p>
         <p>© 2026</p>
       </div>
     </div>
@@ -843,7 +843,9 @@ h2.display em{font-style:normal;color:var(--gold)}
 
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-  var f = document.getElementById('starter');
+  var f = document.querySelector('form#starter');
+  body.append('fields[email]', f.querySelector('[name="fields[email]"]').value);
+  body.append('fields[name]',  f.querySelector('[name="fields[name]"]').value);
   if (!f) { console.warn('starter form not found'); return; }
   var i = document.getElementById('email');
 
