@@ -843,14 +843,16 @@ h2.display em{font-style:normal;color:var(--gold)}
 
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-  var f = document.querySelector('starter');
+  var f = document.querySelector('form#starter-section');
   if (!f) { console.warn('starter form not found'); return; }
-  var i = document.getElementById('email');
+  var card = document.getElementById('starter');
+  var i = document.getElementById('em');
 
   function arrive(){
-    f.classList.add('lit');
+    if (!card || !i) return;
+    card.classList.add('lit');
     setTimeout(function(){ try{ i.focus({preventScroll:true}); }catch(e){ i.focus(); } }, 420);
-    setTimeout(function(){ f.classList.remove('lit'); }, 2600);
+    setTimeout(function(){ card.classList.remove('lit'); }, 2600);
   }
   document.querySelectorAll('a[href="#starter"]').forEach(function(a){
     a.addEventListener('click', arrive);
@@ -862,7 +864,7 @@ document.addEventListener('DOMContentLoaded', function(){
     if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
     var body = new URLSearchParams();
     body.append('fields[email]', f.querySelector('[name="fields[email]"]').value);
-  body.append('fields[name]',  f.querySelector('[name="fields[name]"]').value);
+    body.append('fields[name]',  f.querySelector('[name="fields[name]"]').value);
     body.append('ml-submit', '1');
     body.append('anticsrf', 'true');
     fetch(f.action, {
