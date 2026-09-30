@@ -118,6 +118,22 @@
 .wb-foot { border-top: 1px solid var(--wb-line); padding: 2rem 0 3rem; font-size: 0.875rem; color: var(--wb-muted); }
 .wb-foot p { margin: 0 0 0.5rem; }
 
+/* Signup form */
+.wb-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.wb-form { max-width: 34rem; }
+.wb-form-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.wb-form-row input {
+  flex: 1 1 14rem; min-width: 0; padding: 0.8rem 0.9rem; border-radius: 4px;
+  background: rgba(7, 15, 38, 0.7); border: 1px solid var(--wb-line); color: var(--wb-ink);
+  font: inherit; font-size: 1rem;
+}
+.wb-form-row input:focus { outline: none; border-color: var(--wb-gold); }
+.wb-form-row .wb-button { border: 0; cursor: pointer; font: inherit; font-weight: 600; }
+.wb-form-row .wb-button:disabled { opacity: 0.7; cursor: default; }
+.wb-consent { display: flex; gap: 0.6rem; align-items: flex-start; margin-top: 1rem; font-size: 0.85rem; line-height: 1.5; color: var(--wb-muted); }
+.wb-consent input { margin-top: 0.2rem; flex: 0 0 auto; accent-color: var(--wb-gold); }
+.wb-form-done { color: var(--wb-ink) !important; font-weight: 500; border-left: 3px solid var(--wb-gold); padding-left: 0.9rem; }
+
 /* ---------- Archive ---------- */
 
 .wb-archive { list-style: none; margin: 0 0 4rem; padding: 0; border-top: 1px solid var(--wb-line); }
