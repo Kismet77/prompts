@@ -1,3 +1,5 @@
+     ---
+     ---
 <!doctype html>
 <html lang="en-GB">
 <head>
@@ -9,6 +11,7 @@
 <link rel="canonical" href="https://scepticsdesk.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/brief.css">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 /* ==========================================================================
@@ -357,6 +360,7 @@ h2.display em{font-style:normal;color:var(--gold)}
       <a href="#toolkit">The Toolkit</a>
       <a href="#inside">Look Inside</a>
       <a href="#faq">FAQ</a>
+      <a href="#brief">Weekly Brief</a>
       <a class="btn btn--gold" href="#starter">Free Starter Pack</a>
     </div>
   </div>
@@ -799,6 +803,7 @@ h2.display em{font-style:normal;color:var(--gold)}
 <!-- ============================ CLOSING ============================ -->
 <section class="band band--gold close">
   <div class="wrap">
+    {% include weekly-brief-section.html number="10" %}
     <p class="eyebrow">Where this leaves you</p>
     <h2>Research better.<br><span class="w">Question more.</span><br>Stay sceptical.</h2>
     <p class="lede">The Sceptic’s Toolkit gives you the prompts, processes and practical tools
