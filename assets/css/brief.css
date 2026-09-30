@@ -1,0 +1,146 @@
+/* The Sceptic's Desk · Weekly Brief
+   Everything is namespaced under .wb so it cannot collide with homepage styles. */
+
+.wb {
+  --wb-navy: #0B1636;
+  --wb-navy-2: #111F48;
+  --wb-ink: #E8ECF6;
+  --wb-muted: #9CA8C7;
+  --wb-line: rgba(232, 236, 246, 0.14);
+  --wb-gold: #EFAF43;
+  --wb-coral: #EC745B;
+  --wb-display: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wb-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  color: var(--wb-ink);
+  background-color: var(--wb-navy);
+  background-image:
+    linear-gradient(rgba(232, 236, 246, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 236, 246, 0.045) 1px, transparent 1px);
+  background-size: 45px 45px;
+  font-family: var(--wb-display);
+  line-height: 1.6;
+}
+
+.wb *, .wb *::before, .wb *::after { box-sizing: border-box; }
+.wb a { color: var(--wb-gold); text-underline-offset: 3px; }
+.wb a:focus-visible { outline: 2px solid var(--wb-gold); outline-offset: 3px; border-radius: 2px; }
+
+.wb-wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+
+/* Issue stamp: the one mono element, used for real data (issue no. and date) */
+.wb-stamp {
+  display: inline-flex; gap: 0.75rem; align-items: center;
+  font-family: var(--wb-mono); font-size: 0.8rem; color: var(--wb-muted);
+  border: 1px solid var(--wb-line); padding: 0.35rem 0.7rem; border-radius: 3px;
+}
+.wb-stamp b { color: var(--wb-gold); font-weight: 500; }
+
+.wb-kicker { margin: 1.5rem 0 0.5rem; color: var(--wb-coral); font-weight: 600; font-size: 1rem; }
+
+.wb-title {
+  margin: 0; font-weight: 700; letter-spacing: -0.025em; line-height: 1.05;
+  font-size: clamp(2.2rem, 6.5vw, 3.6rem); text-wrap: balance;
+}
+
+.wb-summary { margin: 1.25rem 0 0; font-size: 1.15rem; color: var(--wb-muted); max-width: 36rem; }
+
+/* ---------- Issue page ---------- */
+
+.wb-page { min-height: 100vh; margin: 0; }
+.wb-topbar { border-bottom: 1px solid var(--wb-line); }
+.wb-topbar .wb-wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-top: 1rem; padding-bottom: 1rem; }
+.wb-brand { color: var(--wb-ink) !important; text-decoration: none; font-weight: 700; letter-spacing: -0.01em; }
+.wb-topbar nav { display: flex; gap: 1.25rem; font-size: 0.95rem; }
+.wb-topbar nav a { color: var(--wb-muted); text-decoration: none; }
+.wb-topbar nav a:hover { color: var(--wb-ink); }
+
+.wb-head { padding: 4rem 0 2.5rem; }
+
+.wb-body { padding-bottom: 2rem; font-size: 1.125rem; }
+.wb-body p { margin: 0 0 1.1rem; }
+.wb-body h2 {
+  margin: 3rem 0 0.75rem; font-size: clamp(1.5rem, 3.6vw, 2rem);
+  letter-spacing: -0.02em; line-height: 1.15; color: var(--wb-gold);
+}
+
+/* The prompt people usually type, shown as the thing to stop doing */
+.wb-body .weak-prompt {
+  margin: 1.5rem 0; padding: 1.1rem 1.25rem;
+  border: 1px dashed var(--wb-coral); border-radius: 4px;
+  background: rgba(236, 116, 91, 0.07);
+}
+.wb-body .weak-prompt p {
+  margin: 0; font-family: var(--wb-mono); font-size: 1rem; color: var(--wb-ink);
+  text-decoration: line-through; text-decoration-color: var(--wb-coral); text-decoration-thickness: 1.5px;
+}
+
+/* The five attack questions: a genuine sequence, so they are numbered */
+.wb-body .attack-list { list-style: none; counter-reset: q; margin: 1.5rem 0 2.5rem; padding: 0; border-top: 1px solid var(--wb-line); }
+.wb-body .attack-list li {
+  counter-increment: q; position: relative;
+  padding: 1rem 0 1rem 3.25rem; border-bottom: 1px solid var(--wb-line);
+  font-size: 1.15rem; font-weight: 500;
+}
+.wb-body .attack-list li::before {
+  content: counter(q, decimal-leading-zero);
+  position: absolute; left: 0; top: 1.05rem;
+  font-family: var(--wb-mono); font-size: 0.9rem; color: var(--wb-gold);
+}
+
+/* Takeaway: the single bold element on the page, with crosshair corners */
+.wb-takeaway {
+  position: relative; margin: 3rem 0 4rem; padding: 2rem 1.75rem;
+  background: var(--wb-navy-2); border: 1px solid var(--wb-line);
+}
+.wb-takeaway::before, .wb-takeaway::after {
+  content: ""; position: absolute; width: 18px; height: 18px;
+  border-color: var(--wb-gold); border-style: solid;
+}
+.wb-takeaway::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.wb-takeaway::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+.wb-takeaway h2 { margin: 0 0 0.9rem; font-size: 1rem; font-weight: 600; color: var(--wb-muted); }
+.wb-takeaway p { margin: 0; font-size: clamp(1.35rem, 3.4vw, 1.75rem); font-weight: 600; line-height: 1.25; letter-spacing: -0.015em; }
+.wb-takeaway p + p { margin-top: 0.35rem; color: var(--wb-gold); }
+
+.wb-signup { border-top: 1px solid var(--wb-line); padding: 2.5rem 0; }
+.wb-signup h2 { margin: 0 0 0.5rem; font-size: 1.35rem; }
+.wb-signup p { margin: 0 0 1.25rem; color: var(--wb-muted); }
+
+.wb-button {
+  display: inline-block; padding: 0.8rem 1.25rem; border-radius: 4px;
+  background: var(--wb-gold); color: var(--wb-navy) !important;
+  font-weight: 600; text-decoration: none;
+}
+.wb-button:hover { filter: brightness(1.06); }
+.wb-button.is-quiet { background: transparent; color: var(--wb-ink) !important; border: 1px solid var(--wb-line); }
+
+.wb-foot { border-top: 1px solid var(--wb-line); padding: 2rem 0 3rem; font-size: 0.875rem; color: var(--wb-muted); }
+.wb-foot p { margin: 0 0 0.5rem; }
+
+/* ---------- Archive ---------- */
+
+.wb-archive { list-style: none; margin: 0 0 4rem; padding: 0; border-top: 1px solid var(--wb-line); }
+.wb-archive li { border-bottom: 1px solid var(--wb-line); }
+.wb-archive a { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; padding: 1.1rem 0; text-decoration: none; color: var(--wb-ink); }
+.wb-archive a:hover .wb-archive-title { color: var(--wb-gold); }
+.wb-archive-meta { font-family: var(--wb-mono); font-size: 0.8rem; color: var(--wb-muted); padding-top: 0.3rem; }
+.wb-archive-title { font-weight: 600; font-size: 1.15rem; line-height: 1.3; }
+.wb-archive-kicker { display: block; font-size: 0.9rem; color: var(--wb-coral); font-weight: 500; margin-bottom: 0.15rem; }
+
+/* ---------- Homepage section ---------- */
+
+.wb-section { padding: 5rem 0; border-top: 1px solid var(--wb-line); }
+.wb-section-label { display: flex; gap: 0.6rem; align-items: baseline; margin: 0 0 2rem; color: var(--wb-muted); font-size: 0.95rem; }
+.wb-section-label b { font-family: var(--wb-mono); color: var(--wb-gold); font-weight: 500; }
+.wb-section .wb-summary { margin-bottom: 2rem; }
+.wb-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+/* Placeholder flag, matching the site's .todo convention */
+.wb .todo { outline: 2px dashed #EC745B; outline-offset: 3px; }
+
+@media (max-width: 560px) {
+  .wb-archive a { grid-template-columns: 1fr; gap: 0.25rem; }
+  .wb-topbar nav { gap: 0.9rem; font-size: 0.875rem; }
+  .wb-head { padding-top: 2.75rem; }
+}

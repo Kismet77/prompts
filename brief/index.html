@@ -1,0 +1,63 @@
+---
+title: Weekly Brief
+---
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0B1636">
+  <title>Weekly Brief · The Sceptic’s Desk</title>
+  <meta name="description" content="A short weekly note on using AI as your analyst, not your decision-maker. No signals, no predictions.">
+  <link rel="canonical" href="{{ '/brief/' | absolute_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/brief.css' | relative_url }}">
+</head>
+<body class="wb wb-page">
+
+  <header class="wb-topbar">
+    <div class="wb-wrap">
+      <a class="wb-brand" href="{{ '/' | relative_url }}">The Sceptic’s Desk</a>
+      <nav aria-label="Site">
+        <a href="{{ '/#method' | relative_url }}">The Method</a>
+        <a href="{{ '/#toolkit' | relative_url }}">The Toolkit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wb-wrap">
+    <header class="wb-head">
+      <h1 class="wb-title">The Weekly Brief</h1>
+      <p class="wb-summary">One short note a week on using AI as your analyst, not your decision-maker. No signals, no predictions.</p>
+    </header>
+
+    {% if site.posts.size > 0 %}
+    <ol class="wb-archive" reversed>
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          <span class="wb-archive-meta">No. {{ post.issue | prepend: '00' | slice: -2, 2 }}<br>{{ post.date | date: '%-d %b %Y' }}</span>
+          <span>
+            {% if post.kicker %}<span class="wb-archive-kicker">{{ post.kicker | smartify }}</span>{% endif %}
+            <span class="wb-archive-title">{{ post.title | smartify }}</span>
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p class="wb-summary" style="margin-bottom:4rem">The first brief goes out this week.</p>
+    {% endif %}
+  </main>
+
+  <footer class="wb-foot">
+    <div class="wb-wrap">
+      <p>Educational content, not financial advice. Most retail traders lose money. Practise on a demo account and only risk what you can afford to lose.</p>
+      <p><a href="{{ '/privacy.html' | relative_url }}">Privacy</a> · <a href="{{ '/terms.html' | relative_url }}">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

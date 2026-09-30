@@ -1,0 +1,25 @@
+{%- comment -%}
+  Homepage "Weekly Brief" section. Always shows the newest brief automatically.
+  Usage in index.html:  {% include weekly-brief-section.html number="10" %}
+{%- endcomment -%}
+{%- assign latest = site.posts.first -%}
+{%- if latest -%}
+<section class="wb wb-section" id="brief" aria-labelledby="brief-title">
+  <div class="wb-wrap">
+    <p class="wb-section-label">{% if include.number %}<b>{{ include.number }}</b>{% endif %}<span>The Weekly Brief</span></p>
+
+    <span class="wb-stamp">
+      <span>No. <b>{{ latest.issue | prepend: '00' | slice: -2, 2 }}</b></span>
+      <time datetime="{{ latest.date | date: '%Y-%m-%d' }}">{{ latest.date | date: '%-d %B %Y' }}</time>
+    </span>
+    {% if latest.kicker %}<p class="wb-kicker">{{ latest.kicker | smartify }}</p>{% endif %}
+    <h2 class="wb-title" id="brief-title">{{ latest.title | smartify }}</h2>
+    <p class="wb-summary">{{ latest.summary | smartify }}</p>
+
+    <div class="wb-actions">
+      <a class="wb-button" href="{{ latest.url | relative_url }}">Read this week’s brief</a>
+      <a class="wb-button is-quiet" href="{{ '/brief/' | relative_url }}">All briefs</a>
+    </div>
+  </div>
+</section>
+{%- endif -%}

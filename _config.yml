@@ -1,0 +1,15 @@
+# Jekyll settings for scepticsdesk.com (GitHub Pages builds this automatically).
+# If the repo already has a _config.yml, merge these keys into it instead.
+title: "The Sceptic’s Desk"
+url: "https://scepticsdesk.com"
+timezone: Europe/London
+markdown: kramdown
+
+# Each Weekly Brief lives at scepticsdesk.com/brief/<slug>/
+permalink: /brief/:title/
+
+# Briefs dated in the future stay hidden until a later build.
+future: false
+
+exclude:
+  - README-weekly-brief.md

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0B1636">
+  <title>{{ page.title | strip_html }} · Weekly Brief · The Sceptic’s Desk</title>
+  <meta name="description" content="{{ page.summary | strip_html | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.summary | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/brief.css' | relative_url }}">
+</head>
+<body class="wb wb-page">
+
+  <header class="wb-topbar">
+    <div class="wb-wrap">
+      <a class="wb-brand" href="{{ '/' | relative_url }}">The Sceptic’s Desk</a>
+      <nav aria-label="Weekly Brief">
+        <a href="{{ '/brief/' | relative_url }}">All briefs</a>
+        <a href="{{ '/#toolkit' | relative_url }}">The Toolkit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wb-wrap">
+    <article>
+      <header class="wb-head">
+        <span class="wb-stamp">
+          <span>Weekly Brief <b>No. {{ page.issue | prepend: '00' | slice: -2, 2 }}</b></span>
+          <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%-d %B %Y' }}</time>
+        </span>
+        {% if page.kicker %}<p class="wb-kicker">{{ page.kicker | smartify }}</p>{% endif %}
+        <h1 class="wb-title">{{ page.title | smartify }}</h1>
+      </header>
+
+      <div class="wb-body">
+        {{ content }}
+      </div>
+
+      {% if page.takeaway_1 %}
+      <aside class="wb-takeaway" aria-labelledby="takeaway-label">
+        <h2 id="takeaway-label">The Sceptic’s takeaway</h2>
+        <p>{{ page.takeaway_1 | smartify }}</p>
+        {% if page.takeaway_2 %}<p>{{ page.takeaway_2 | smartify }}</p>{% endif %}
+      </aside>
+      {% endif %}
+    </article>
+
+    {% assign newer = page.next %}{% assign older = page.previous %}
+    {% if newer or older %}
+    <nav class="wb-actions" aria-label="More briefs" style="margin-bottom:3rem">
+      {% if older %}<a class="wb-button is-quiet" href="{{ older.url | relative_url }}">Previous brief</a>{% endif %}
+      {% if newer %}<a class="wb-button is-quiet" href="{{ newer.url | relative_url }}">Next brief</a>{% endif %}
+    </nav>
+    {% endif %}
+
+    <section class="wb-signup">
+      <h2>Get the Weekly Brief by email</h2>
+      <p>One short method note a week. No signals, no predictions.</p>
+      <!-- TODO: point this at the Weekly Brief MailerLite form once the group exists -->
+      <a class="wb-button todo" href="{{ '/#starter' | relative_url }}">Get the free Starter Pack</a>
+    </section>
+  </main>
+
+  <footer class="wb-foot">
+    <div class="wb-wrap">
+      <p>Educational content, not financial advice. Most retail traders lose money. Practise on a demo account and only risk what you can afford to lose.</p>
+      <p>The Sceptic’s Desk is a trading name of Fiona Soares, sole trader, England and Wales. <a href="mailto:hello@scepticsdesk.com">hello@scepticsdesk.com</a></p>
+      <p><a href="{{ '/privacy.html' | relative_url }}">Privacy</a> · <a href="{{ '/terms.html' | relative_url }}">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
