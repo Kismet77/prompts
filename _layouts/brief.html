@@ -61,12 +61,50 @@
     </nav>
     {% endif %}
 
-    <section class="wb-signup">
+    <section class="wb-signup" id="brief-signup">
       <h2>Get the Weekly Brief by email</h2>
       <p>One short method note a week. No signals, no predictions.</p>
-      <!-- TODO: point this at the Weekly Brief MailerLite form once the group exists -->
-      <a class="wb-button todo" href="{{ '/#starter' | relative_url }}">Get the free Starter Pack</a>
+
+      <form class="wb-form" id="brief-form" method="post"
+            action="https://assets.mailerlite.com/jsonp/2560096/forms/200064822398682263/subscribe">
+        <label class="wb-sr" for="brief-email">Email address</label>
+        <div class="wb-form-row">
+          <input id="brief-email" type="email" name="fields[email]" autocomplete="email"
+                 placeholder="you@example.com" required>
+          <button class="wb-button" type="submit">Get the Weekly Brief</button>
+        </div>
+        <label class="wb-consent">
+          <input type="checkbox" required>
+          <span>Yes, send me the Weekly Brief. I can unsubscribe from any email, and my address will never be sold or shared.</span>
+        </label>
+      </form>
+
+      <p class="wb-form-done" id="brief-done" role="status" hidden>Thanks, you’re on the list. The next brief will land in your inbox.</p>
     </section>
+
+    <script>
+    (function(){
+      var f = document.getElementById('brief-form');
+      if (!f) return;
+      f.addEventListener('submit', function(e){
+        e.preventDefault();
+        var btn = f.querySelector('button[type="submit"]');
+        btn.disabled = true; btn.textContent = 'Sending…';
+        var body = new URLSearchParams();
+        body.append('fields[email]', f.querySelector('[name="fields[email]"]').value);
+        body.append('ml-submit', '1');
+        body.append('anticsrf', 'true');
+        fetch(f.action, {
+          method: 'POST', mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body.toString()
+        }).catch(function(){}).then(function(){
+          f.hidden = true;
+          document.getElementById('brief-done').hidden = false;
+        });
+      });
+    })();
+    </script>
   </main>
 
   <footer class="wb-foot">
