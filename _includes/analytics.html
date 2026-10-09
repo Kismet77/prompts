@@ -1,0 +1,143 @@
+{%- comment -%}
+  The Sceptic's Desk: consent-gated analytics
+  Include once inside <head> in _layouts/default.html:  {% include analytics.html %}
+  IDs live in _config.yml under `analytics:`. Leave an ID blank to switch that tracker off.
+  Nothing loads until the visitor clicks Accept (UK PECR / GDPR "basic" consent).
+  Runs only on the live site (GitHub Pages builds with JEKYLL_ENV=production),
+  so local `jekyll serve` previews never pollute your data.
+  Opt a page out entirely with `analytics: false` in its front matter.
+{%- endcomment -%}
+{%- if jekyll.environment == "production" and page.analytics != false -%}
+<script>
+(function () {
+  var CFG = {
+    ga4:     {{ site.analytics.ga4_id | default: "" | jsonify }},
+    meta:    {{ site.analytics.meta_pixel_id | default: "" | jsonify }},
+    x:       {{ site.analytics.x_pixel_id | default: "" | jsonify }},
+    xLead:   {{ site.analytics.x_lead_event_id | default: "" | jsonify }}
+  };
+  var KEY = 'sd-consent';
+  var loaded = false;
+  var pending = [];
+
+  function getConsent() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function setConsent(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  // Google Consent Mode v2 defaults: everything denied until Accept.
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  gtag('consent', 'default', {
+    ad_storage: 'denied', ad_user_data: 'denied',
+    ad_personalization: 'denied', analytics_storage: 'denied'
+  });
+
+  function addScript(src) {
+    var s = document.createElement('script');
+    s.async = true; s.src = src;
+    document.head.appendChild(s);
+  }
+
+  function loadTrackers() {
+    if (loaded) return;
+    loaded = true;
+
+    if (CFG.ga4) {
+      gtag('consent', 'update', {
+        ad_storage: 'granted', ad_user_data: 'granted',
+        ad_personalization: 'granted', analytics_storage: 'granted'
+      });
+      addScript('https://www.googletagmanager.com/gtag/js?id=' + CFG.ga4);
+      gtag('js', new Date());
+      gtag('config', CFG.ga4);
+    }
+
+    if (CFG.meta) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', CFG.meta);
+      fbq('track', 'PageView');
+    }
+
+    if (CFG.x) {
+      !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments)
+      :s.queue.push(arguments);},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,
+      u.src='https://static.ads-twitter.com/uwt.js',a=t.getElementsByTagName(n)[0],
+      a.parentNode.insertBefore(u,a))}(window,document,'script');
+      twq('config', CFG.x);
+    }
+
+    while (pending.length) fire.apply(null, pending.shift());
+  }
+
+  function fire(name, params) {
+    params = params || {};
+    if (name === 'lead') {
+      if (CFG.ga4) gtag('event', 'generate_lead', params);
+      if (window.fbq) fbq('track', 'Lead', params);
+      if (window.twq && CFG.xLead) twq('event', CFG.xLead, {});
+    } else {
+      if (CFG.ga4) gtag('event', name, params);
+    }
+  }
+
+  // Public helper for pages: sdTrack('lead', {lead_source: 'starter-pack'})
+  // Queues until consent; drops silently if the visitor rejected.
+  window.sdTrack = function (name, params) {
+    if (loaded) fire(name, params);
+    else if (getConsent() !== 'denied') pending.push([name, params]);
+  };
+
+  // Footer link: <a href="#" onclick="sdCookieSettings();return false;">Cookie settings</a>
+  window.sdCookieSettings = function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    location.reload();
+  };
+
+  function showBanner() {
+    var css = document.createElement('style');
+    css.textContent =
+      '#sd-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;' +
+      'background:#0B1636;color:#fff;border:1px solid rgba(239,175,67,.45);border-radius:6px;padding:16px 18px;' +
+      'font-family:"Space Grotesk",system-ui,sans-serif;font-size:14px;line-height:1.5;box-shadow:0 8px 24px rgba(0,0,0,.35)}' +
+      '#sd-consent p{margin:0 0 12px}' +
+      '#sd-consent a{color:#EFAF43}' +
+      '#sd-consent .sd-row{display:flex;gap:10px;flex-wrap:wrap}' +
+      '#sd-consent button{flex:1 1 140px;font:500 13px "JetBrains Mono",ui-monospace,monospace;letter-spacing:.04em;' +
+      'padding:10px 14px;border-radius:4px;cursor:pointer;border:1px solid #EFAF43}' +
+      '#sd-consent .sd-accept{background:#EFAF43;color:#0B1636}' +
+      '#sd-consent .sd-reject{background:transparent;color:#EFAF43}';
+    document.head.appendChild(css);
+
+    var box = document.createElement('div');
+    box.id = 'sd-consent';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-label', 'Cookie consent');
+    box.innerHTML =
+      '<p>We use analytics and ad-platform cookies to see which posts and emails bring people here. ' +
+      'Nothing loads unless you accept. <a href="{{ site.analytics.privacy_url | default: "/privacy/" }}">Privacy policy</a></p>' +
+      '<div class="sd-row"><button class="sd-reject" type="button">REJECT</button>' +
+      '<button class="sd-accept" type="button">ACCEPT</button></div>';
+    document.body.appendChild(box);
+
+    box.querySelector('.sd-accept').onclick = function () {
+      setConsent('granted'); box.remove(); loadTrackers();
+    };
+    box.querySelector('.sd-reject').onclick = function () {
+      setConsent('denied'); box.remove(); pending = [];
+    };
+  }
+
+  var c = getConsent();
+  if (c === 'granted') loadTrackers();
+  else if (c !== 'denied') {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', showBanner);
+    else showBanner();
+  }
+})();
+</script>
+{%- else -%}
+<script>window.sdTrack = function () {}; window.sdCookieSettings = function () {};</script>
+{%- endif -%}
