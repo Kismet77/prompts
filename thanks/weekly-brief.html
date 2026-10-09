@@ -1,0 +1,159 @@
+---
+permalink: /thanks/weekly-brief/
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>You're on the list · The Sceptic's Desk</title>
+  <!-- If your other pages embed the fonts as base64, copy that @font-face block here
+       and delete these two Google Fonts lines. -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0B1636;
+      --gold: #EFAF43;
+      --coral: #EC745B;
+      --accent: #EFAF43;
+      --text: #E8ECF5;
+      --muted: rgba(232, 236, 245, .68);
+      --line: rgba(239, 175, 67, .14);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--navy);
+      background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+      background-size: 45px 45px;
+      color: var(--text);
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 16px;
+    }
+    .card {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      padding: 44px 36px;
+      background: rgba(11, 22, 54, .92);
+      border: 1px solid rgba(239, 175, 67, .35);
+    }
+    /* Crosshair corner marks */
+    .corner { position: absolute; width: 18px; height: 18px; }
+    .corner::before, .corner::after { content: ""; position: absolute; background: var(--accent); }
+    .corner::before { width: 18px; height: 1px; top: 8.5px; left: 0; }
+    .corner::after  { width: 1px; height: 18px; left: 8.5px; top: 0; }
+    .tl { top: -9px; left: -9px; }
+    .tr { top: -9px; right: -9px; }
+    .bl { bottom: -9px; left: -9px; }
+    .br { bottom: -9px; right: -9px; }
+
+    .label {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+    h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.15; margin: 0 0 16px; font-weight: 700; }
+    p { margin: 0 0 16px; color: var(--muted); }
+    p strong { color: var(--text); font-weight: 500; }
+    ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 28px 0; border-top: 1px solid rgba(239,175,67,.2); }
+    ol.steps li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 4px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(239,175,67,.2);
+      color: var(--muted);
+    }
+    ol.steps li::before {
+      content: counter(step, decimal-leading-zero);
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 13px;
+      color: var(--accent);
+      padding-top: 2px;
+    }
+    ol.steps li strong { color: var(--text); font-weight: 500; }
+    code {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: .9em;
+      color: var(--text);
+      background: rgba(239,175,67,.1);
+      padding: 1px 6px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 8px;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 12px 20px;
+    }
+    .btn:hover { background: var(--accent); color: var(--navy); }
+    footer {
+      padding: 20px 16px 28px;
+      text-align: center;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+    @media (max-width: 480px) { .card { padding: 36px 22px; } }
+  </style>
+  {% include analytics.html %}
+</head>
+<body>
+  <main>
+    <section class="card">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+
+      <p class="label">// Weekly Brief · confirmed</p>
+      <h1>You're on the list.</h1>
+      <p>The Weekly Brief lands in your inbox once a week: what the hype said, what the evidence says, and what's worth testing yourself.</p>
+
+      <ol class="steps">
+        <li><span><strong>Briefs come from <code>hello@scepticsdesk.com</code>.</strong> Add it to your contacts so they don't end up in spam or promotions.</span></li>
+        <li><span><strong>Can't wait for the next one?</strong> Past briefs are on the site.</span></li>
+        <li><span><strong>No longer useful?</strong> Every brief has a one-click unsubscribe.</span></li>
+      </ol>
+
+      <a class="btn" href="/">Back to The Sceptic's Desk</a>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/privacy/">Privacy</a> ·
+    <a href="#" onclick="sdCookieSettings();return false;">Cookie settings</a>
+  </footer>
+
+  <script>
+    // Fires GA4 generate_lead, Meta Lead and X Lead, only if the visitor has consented.
+    sdTrack('lead', { lead_source: 'weekly-brief' });
+  </script>
+</body>
+</html>
