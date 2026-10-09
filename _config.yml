@@ -13,3 +13,13 @@ future: false
 
 exclude:
   - README-weekly-brief.md
+
+analytics:
+  ga4_id: "G-4Z41BMWQQX"          # GA4 → Admin → Data streams → Measurement ID
+  meta_pixel_id: ""               # Meta Events Manager → dataset/pixel ID (digits only)
+  x_pixel_id: ""                  # X Ads → Events manager → pixel ID
+  x_lead_event_id: ""             # X Ads → your Lead event, format tw-xxxxx-xxxxx
+  privacy_url: "/privacy/"        # where the banner's privacy link points
+
+plugins:
+  - jekyll-sitemap                # merge into your existing plugins list if you have one
