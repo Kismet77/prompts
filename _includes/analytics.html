@@ -117,7 +117,7 @@
     box.setAttribute('aria-label', 'Cookie consent');
     box.innerHTML =
       '<p>We use analytics and ad-platform cookies to see which posts and emails bring people here. ' +
-      'Nothing loads unless you accept. <a href="{{ site.analytics.privacy_url | default: "/privacy/" }}">Privacy policy</a></p>' +
+      'Nothing loads unless you accept. <a href="{{ site.analytics.privacy_url | default: "/privacy.html" }}">Privacy policy</a></p>' +
       '<div class="sd-row"><button class="sd-reject" type="button">REJECT</button>' +
       '<button class="sd-accept" type="button">ACCEPT</button></div>';
     document.body.appendChild(box);
